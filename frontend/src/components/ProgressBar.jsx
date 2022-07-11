@@ -1,6 +1,6 @@
-export default function Slide() {
+export default function ProgressBar() {
     return (
-        <div className="Slider">
+        <div className="ProgressBar">
             <img className="Slider" alt="slider" src="images/slider.png"/>
         </div>
     );

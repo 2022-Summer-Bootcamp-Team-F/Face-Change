@@ -1,21 +1,21 @@
-import Header from './component/Header';
-import Comment from './component/Comment';
-import PicturePageBtn from './component/PicturePageBtn';
-import ExamplePictures from './component/ExamplePictures';
-import Slide from './component/Slide';
-import Gallery from './component/Gallery';
+import React from 'react';
+
+import Header from './components/Header';
+import Comment from './components/Comment';
+import PicturePageBtn from './components/PicturePageBtn';
+import ExamplePictures from './components/ExamplePictures';
+import ProgressBar from './components/ProgressBar';
+import Gallery from './components/Gallery';
 
 function App() {
   return (
    <>
     <Header />
-    <div className="container">
-      <Comment />
-      <PicturePageBtn />
-      <ExamplePictures />
-      <Slide />
-      <Gallery />
-    </div>
+    <Comment />
+    <PicturePageBtn />
+    <ExamplePictures />
+    <ProgressBar />
+    <Gallery />
    </>
   );
 }
