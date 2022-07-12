@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Logo = styled.div`
+const Logo = styled.section`
     padding:30px;
 `
 
