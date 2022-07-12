@@ -9,11 +9,16 @@ import Scroll from './components/Scroll';
 import Gallery from './components/Gallery';
 
 function App() {
-  return (<BrowserRouter>
-  <Switch>
-    <Route />
-  </Switch>
-  </BrowserRouter>);
+  return (
+    <div>
+      <Header />
+      <Comment />
+      <PicturePageBtn />
+      <ExamplePictures />
+      <Scroll />
+      <Gallery />
+    </div>
+  )
 }
 
 export default App;
