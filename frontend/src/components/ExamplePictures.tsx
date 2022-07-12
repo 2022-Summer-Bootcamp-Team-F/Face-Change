@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './ExamplePictures.module.css';
 
 export default function ExamplePictures() {

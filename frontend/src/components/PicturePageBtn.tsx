@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './PicturePageBtn.module.css';
 
 export default function PicturePageBtn() {
