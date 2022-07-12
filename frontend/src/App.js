@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Comment from './components/Comment';
 import PicturePageBtn from './components/PicturePageBtn';
 import ExamplePictures from './components/ExamplePictures';
-import ProgressBar from './components/ProgressBar';
+import Scroll from './components/Scroll';
 import Gallery from './components/Gallery';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <Comment />
     <PicturePageBtn />
     <ExamplePictures />
-    <ProgressBar />
+    <Scroll />
     <Gallery />
    </>
   );
