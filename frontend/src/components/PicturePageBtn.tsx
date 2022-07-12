@@ -11,11 +11,7 @@ const Btn = styled.button`width: 18.063rem;
     display: flex;
     justify-content: center;
     align-items: center;
-`
 
-const Btntag = styled.p`
-    width: 9.875rem;
-    height: 3rem;
     font-family: Inter;
     font-size: 2.5rem;
     font-weight: 500;
@@ -26,13 +22,10 @@ const Btntag = styled.p`
     text-align: left;
     color: #fff;
 `
-
 export default function PicturePageBtn() {
     return (
         <Btn>
-            <Btntag>
-                <p className="Btntag">사진 선택</p>
-            </Btntag>
+             <p className="Btntag">사진 선택</p>
         </Btn>
     );
 }
