@@ -40,19 +40,19 @@ export default function ExamplePictures() {
   return (
     <Container>
       <Cartoon>
-        <img className='Cartoon' alt='cartoon' src='images/cartoon.png' />
+        <img className="Cartoon" alt="cartoon" src="images/cartoon.png" />
         <p>cartoon</p>
       </Cartoon>
       <Caricature>
         <img
-          className='Caricature'
-          alt='caricature'
-          src='images/caricature.png'
+          className="Caricature"
+          alt="caricature"
+          src="images/caricature.png"
         />
         <p>caricature</p>
       </Caricature>
       <Anime>
-        <img className='anime' alt='anime' src='images/anime.png' />
+        <img className="anime" alt="anime" src="images/anime.png" />
         <p>anime</p>
       </Anime>
     </Container>

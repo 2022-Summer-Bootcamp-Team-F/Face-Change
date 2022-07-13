@@ -26,7 +26,7 @@ const Btn = styled.button`
 export default function PicturePageBtn() {
   return (
     <Btn>
-      <p className='Btntag'>사진 선택</p>
+      <p className="Btntag">사진 선택</p>
     </Btn>
   );
 }

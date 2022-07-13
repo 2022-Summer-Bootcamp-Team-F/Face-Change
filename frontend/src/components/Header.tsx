@@ -8,8 +8,8 @@ const Logo = styled.section`
 export default function Header() {
   return (
     <Logo>
-      <img className='logoImage' alt='logo' src='images/logo.png' />
-      <img className='paletteImage' alt='palette' src='images/palette.png' />
+      <img className="logoImage" alt="logo" src="images/logo.png" />
+      <img className="paletteImage" alt="palette" src="images/palette.png" />
     </Logo>
   );
 }

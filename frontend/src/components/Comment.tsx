@@ -39,9 +39,9 @@ const Sentence2 = styled.p`
 
 export default function Comment() {
   return (
-    <div className='Comment'>
-      <Sentence1 className='sentence1'>만화 속의 당신은</Sentence1>
-      <Sentence2 className='sentence2'>어떤 모습인지 궁금한가요?</Sentence2>
+    <div className="Comment">
+      <Sentence1 className="sentence1">만화 속의 당신은</Sentence1>
+      <Sentence2 className="sentence2">어떤 모습인지 궁금한가요?</Sentence2>
     </div>
   );
 }
