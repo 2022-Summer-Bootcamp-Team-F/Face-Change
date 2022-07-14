@@ -1,31 +1,26 @@
 import React from 'react';
 import styled from "styled-components";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Header from './components/Header';
-import Comment from './components/Comment';
-import PicturePageBtn from './components/PicturePageBtn';
-import ExamplePictures from './components/ExamplePictures';
-import Scroll from './components/Scroll';
-import Gallery from './components/Gallery';
-
-const BackgroundImage = styled.div`
-  background-image: url('images/background.png');
-  width:100vw;
-  height:100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-`
+import Main from './pages/Main';
+import Pictureupload from './pages/Pictureupload';
+import Style from './pages/Style';
+import Results from './pages/Results';
+import Roading from './pages/Roading';
+import Error from './pages/Error';
 
 function App() {
   return (
-    <BackgroundImage>
-      <Header />
-      <Comment />
-      <PicturePageBtn />
-      <ExamplePictures />
-      <Scroll />
-      <Gallery />
-    </BackgroundImage>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main/>}/>
+        <Route path="/pictureupload" element={<Pictureupload/>}/>
+        <Route path="/style" element={<Style/>}/>
+        <Route path="/results" element={<Results/>}/>
+        <Route path="/roading" element={<Roading/>}/>
+        <Route path="/error" element={<Error/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
