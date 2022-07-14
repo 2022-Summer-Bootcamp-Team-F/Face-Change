@@ -47,7 +47,7 @@ export default function ExamplePictures() {
         <img
           className="Caricature"
           alt="caricature"
-          src="images/caricature.png"
+          src="images/caricature2.png"
         />
         <p>caricature</p>
       </Caricature>
