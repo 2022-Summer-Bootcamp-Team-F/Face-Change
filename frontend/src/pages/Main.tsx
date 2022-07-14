@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Comment from '../components/Comment';
 import PicturePageBtn from '../components/PicturePageBtn';
 import ExamplePictures from '../components/ExamplePictures';
-import Scroll from '../components/Scroll';
 import Gallery from '../components/Gallery';
 
 const BackgroundImage = styled.div`
@@ -18,13 +17,12 @@ const BackgroundImage = styled.div`
 
 export default function Main() {
     return(
-        <BackgroundImage>
-            <Header />
-            <Comment />
-            <PicturePageBtn />
-            <ExamplePictures />
-            <Scroll />
-            <Gallery />
-      </BackgroundImage>
+    <BackgroundImage>
+      <Header />
+      <Comment />
+      <PicturePageBtn />
+      <ExamplePictures />
+      <Gallery />
+    </BackgroundImage>
     );
 }
