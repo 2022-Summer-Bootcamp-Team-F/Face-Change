@@ -3,6 +3,10 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  min-width: 500px;
 `;
 
 const BMan = styled.section`
@@ -12,6 +16,8 @@ const BMan = styled.section`
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
+  text-align: center;
+  font-size: 3rem;
 `;
 
 const BMan2 = styled.section`
@@ -21,6 +27,8 @@ const BMan2 = styled.section`
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
+  text-align: center;
+  font-size: 3rem;
 `;
 
 const BMan3 = styled.section`
@@ -30,6 +38,8 @@ const BMan3 = styled.section`
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
+  text-align: center;
+  font-size: 3rem;
 `;
 
 const BMan4 = styled.section`
@@ -39,6 +49,8 @@ const BMan4 = styled.section`
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
+  text-align: center;
+  font-size: 3rem;
 `;
 
 export default function Gallery() {
