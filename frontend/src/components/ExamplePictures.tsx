@@ -91,7 +91,7 @@ export default function ExamplePictures() {
         <img
         className="Cartoon"
         alt="cartoon"
-        src="images/cartoon.png" />
+        src="images/cartoon2.png" />
         <p>cartoon</p>
         <ChangeImage>
           <img
@@ -116,7 +116,7 @@ export default function ExamplePictures() {
       <Anime>
         <img className="anime"
         alt="anime"
-        src="images/anime.png" />
+        src="images/anime2.png" />
         <p>anime</p>
         <ChangeImage>
           <img
