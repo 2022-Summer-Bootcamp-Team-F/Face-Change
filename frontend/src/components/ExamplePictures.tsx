@@ -89,29 +89,41 @@ export default function ExamplePictures() {
     <Container>
       <Cartoon>
         <img
-        className="Cartoonchange"
-        alt="cartoonchange"
-        src="images/cartoonchange.png" />
+        className="Cartoon"
+        alt="cartoon"
+        src="images/cartoon.png" />
         <p>cartoon</p>
         <ChangeImage>
           <img
-          className="Cartoon"
-          alt="cartoon"
-          src="images/cartoon.png"/>
+          className="Changeimage"
+          alt="changeimage"
+          src="images/beforeimage.png"/>
         </ChangeImage>
       </Cartoon>
       <Caricature>
       <img
           className="Caricature"
           alt="caricature"
-          src="images/caricature2.png" />
+          src="images/caricature.png" />
         <p>caricature</p>
+        <ChangeImage>
+          <img
+          className="Changeimage"
+          alt="changeimage"
+          src="images/beforeimage.png"/>
+        </ChangeImage>
       </Caricature>
       <Anime>
         <img className="anime"
         alt="anime"
         src="images/anime.png" />
         <p>anime</p>
+        <ChangeImage>
+          <img
+          className="Changeimage"
+          alt="changeimage"
+          src="images/beforeimage.png"/>
+        </ChangeImage>
       </Anime>
     </Container>
   );
