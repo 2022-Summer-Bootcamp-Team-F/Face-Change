@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
 import Header from './components/Header';
 import Comment from './components/Comment';
