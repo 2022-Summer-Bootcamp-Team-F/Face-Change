@@ -55,9 +55,9 @@ const BackImage = styled.div`
 export default function Scroll() {
     return (
         <FrontImage>
-            <img alt="cartoon" src="images/cartoon.png"/>
+            <img alt="cartoonbefore" src="images/cartoonbefore.png"/>
             <BackImage>
-                <img alt="anime" src="images/anime.png"/>
+                <img alt="cartoon" src="images/cartoon.png"/>
             </BackImage>
         </FrontImage>
     );
