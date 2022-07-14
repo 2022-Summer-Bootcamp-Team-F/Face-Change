@@ -5,7 +5,7 @@ const Container = styled.div`
   display: flex;
 `;
 
-const Cartoon = styled.section`
+const Cartoon = styled.div`
   width: 18.75rem;
   height: 18.75rem;
   margin: 3.938rem 7.688rem 0.875rem 5.125rem;
@@ -15,7 +15,8 @@ const Cartoon = styled.section`
   text-align: center;
   font-size: 3rem;
 `;
-const Caricature = styled.section`
+
+const Caricature = styled.div`
   width: 18.75rem;
   height: 18.75rem;
   margin: 3.938rem 7.688rem 0.875rem 5.125rem;
@@ -25,7 +26,8 @@ const Caricature = styled.section`
   text-align: center;
   font-size: 3rem;
 `;
-const Anime = styled.section`
+
+const Anime = styled.div`
   width: 18.75rem;
   height: 18.75rem;
   margin: 3.938rem 7.688rem 0.875rem 5.125rem;
@@ -40,19 +42,23 @@ export default function ExamplePictures() {
   return (
     <Container>
       <Cartoon>
-        <img className="Cartoon" alt="cartoon" src="images/cartoon.png" />
+        <img
+        className="Cartoon"
+        alt="cartoon"
+        src="images/cartoon.png" />
         <p>cartoon</p>
       </Cartoon>
       <Caricature>
-        <img
+      <img
           className="Caricature"
           alt="caricature"
-          src="images/caricature2.png"
-        />
+          src="images/caricature2.png" />
         <p>caricature</p>
       </Caricature>
       <Anime>
-        <img className="anime" alt="anime" src="images/anime.png" />
+        <img className="anime"
+        alt="anime"
+        src="images/anime.png" />
         <p>anime</p>
       </Anime>
     </Container>
