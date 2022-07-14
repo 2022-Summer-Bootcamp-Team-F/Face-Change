@@ -5,7 +5,7 @@ const Container = styled.div`
   display: flex;
 `;
 
-const Man = styled.section`
+const BMan = styled.section`
   width: 18.75rem;
   height: 18.75rem;
   margin: 3.938rem 7.688rem 0.875rem 5.125rem;
@@ -15,5 +15,12 @@ const Man = styled.section`
 `;
 
 export default function Gallery() {
-  return <div>Gallery</div>;
+  return (
+    <Container>
+      <BMan>
+        <img className="BMan" alt="bman" src="images/gallery_images/BMan.jpg" />
+        <p>BMan</p>
+      </BMan>
+    </Container>
+  );
 }
