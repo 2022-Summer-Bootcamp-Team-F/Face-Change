@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from "styled-components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Main from './pages/Main';
