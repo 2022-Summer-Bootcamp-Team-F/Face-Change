@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ const Container = styled.div`
 const Cartoon = styled.section`
   width: 18.75rem;
   height: 18.75rem;
-  margin: 3.938rem 7.688rem 0.875rem 5.125rem;
+  margin: 0 auto;
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
@@ -18,7 +18,7 @@ const Cartoon = styled.section`
 const Caricature = styled.section`
   width: 18.75rem;
   height: 18.75rem;
-  margin: 3.938rem 7.688rem 0.875rem 5.125rem;
+  margin: 0 auto;
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
@@ -28,7 +28,7 @@ const Caricature = styled.section`
 const Anime = styled.section`
   width: 18.75rem;
   height: 18.75rem;
-  margin: 3.938rem 7.688rem 0.875rem 5.125rem;
+  margin: 0 auto;
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
