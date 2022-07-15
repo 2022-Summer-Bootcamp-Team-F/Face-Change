@@ -9,9 +9,9 @@ const Container = styled.div`
 `;
 
 const BMan = styled.section`
-  width: 18.75rem;
-  height: 18.75rem;
-  margin: 0 auto;
+  width: 24.313rem;
+  height: 21.938rem;
+  margin: 4.75rem 3.75rem 2.938rem 2.438rem;
   padding: 14.375rem 16.188rem 1rem 0.875rem;
   object-fit: contain;
   border-radius: 50px;
