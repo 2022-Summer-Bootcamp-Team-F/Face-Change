@@ -104,6 +104,22 @@ export default function Gallery() {
           />
           <p>BMan3</p>
         </BMan4>
+        <BMan5>
+          <img
+            className="BMan4"
+            alt="bman"
+            src="images/gallery_images/BMan5.jpg"
+          />
+          <p>BMan3</p>
+        </BMan5>
+        <BMan6>
+          <img
+            className="BMan4"
+            alt="bman"
+            src="images/gallery_images/BMan6.jpg"
+          />
+          <p>BMan3</p>
+        </BMan6>
       </Container>
     </Container>
   );
