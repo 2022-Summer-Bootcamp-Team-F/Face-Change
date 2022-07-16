@@ -4,15 +4,13 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  /* width: 90%;
-  min-width: 500px; */
 `;
 
 const BMan = styled.section`
   width: 24.313rem;
   height: 21.938rem;
-  margin: 4.75rem 3.75rem 2.938rem 2.438rem;
-  padding: 14.375rem 16.188rem 1rem 0.875rem;
+  margin: 0 auto;
+  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 50px;
   text-align: center;
@@ -20,10 +18,10 @@ const BMan = styled.section`
 `;
 
 const BMan2 = styled.section`
-  width: 18.75rem;
-  height: 18.75rem;
+  width: 24.25rem;
+  height: 21.938rem;
   margin: 0 auto;
-  padding: 14.375rem 16.063rem 1rem 0.813rem;
+  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 50px;
   text-align: center;
@@ -31,10 +29,10 @@ const BMan2 = styled.section`
 `;
 
 const BMan3 = styled.section`
-  width: 18.75rem;
-  height: 18.75rem;
+  width: 24.313rem;
+  height: 21.938rem;
   margin: 0 auto;
-  padding: 14.375rem 16.188rem 1rem 0.875rem;
+  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 50px;
   text-align: center;
@@ -42,10 +40,10 @@ const BMan3 = styled.section`
 `;
 
 const BMan4 = styled.section`
-  width: 18.75rem;
-  height: 18.75rem;
+  width: 24.313rem;
+  height: 21.938rem;
   margin: 0 auto;
-  padding: 14.375rem 16.188rem 1rem 0.875rem;
+  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 50px;
   text-align: center;
@@ -53,10 +51,10 @@ const BMan4 = styled.section`
 `;
 
 const BMan5 = styled.section`
-  width: 18.75rem;
-  height: 18.75rem;
+  width: 24.25rem;
+  height: 21.938rem;
   margin: 0 auto;
-  padding: 14.375rem 16.063rem 1rem 0.813rem;
+  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 50px;
   text-align: center;
@@ -67,7 +65,7 @@ const BMan6 = styled.section`
   width: 24.313rem;
   height: 21.938rem;
   margin: 0 auto;
-  padding: 14.375rem 16.188rem 1rem 0.875rem;
+  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 50px;
   text-align: center;
@@ -97,30 +95,16 @@ export default function Gallery() {
         />
         <p>BMan3</p>
       </BMan3>
-      <BMan4>
-        <img
-          className="BMan4"
-          alt="bman"
-          src="images/gallery_images/BMan4.jpg"
-        />
-        <p>BMan4</p>
-      </BMan4>
-      <BMan5>
-        <img
-          className="BMan5"
-          alt="bman"
-          src="images/gallery_images/BMan5.jpg"
-        />
-        <p>BMan5</p>
-      </BMan5>
-      <BMan6>
-        <img
-          className="BMan6"
-          alt="bman"
-          src="images/gallery_images/BMan6.jpg"
-        />
-        <p>BMan6</p>
-      </BMan6>
+      <Container>
+        <BMan4>
+          <img
+            className="BMan4"
+            alt="bman"
+            src="images/gallery_images/BMan4.jpg"
+          />
+          <p>BMan3</p>
+        </BMan4>
+      </Container>
     </Container>
   );
 }
