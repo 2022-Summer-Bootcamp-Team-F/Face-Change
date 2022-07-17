@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 const Btn = styled.button`
   width: 18.063rem;
@@ -23,10 +24,13 @@ const Btn = styled.button`
   text-align: left;
   color: #fff;
 `;
+
 export default function PicturePageBtn() {
   return (
     <Btn>
-      <p className="Btntag">사진 선택</p>
+      <Link to = "/Pictureupload" style={{textDecoration: 'inherit'}}>
+        <p className="Btntag">사진 선택</p>
+      </Link> 
     </Btn>
   );
 }
