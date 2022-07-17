@@ -28,7 +28,7 @@ const Btn = styled.button`
 export default function PicturePageBtn() {
   return (
     <Btn>
-      <Link to = "/Pictureupload" style={{textDecoration: 'inherit'}}>
+      <Link to = "/Pictureupload" style={{color: 'inherit', textDecoration: 'inherit'}}>
         <p className="Btntag">사진 선택</p>
       </Link> 
     </Btn>
