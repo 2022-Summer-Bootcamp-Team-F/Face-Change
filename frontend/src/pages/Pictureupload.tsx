@@ -1,5 +1,5 @@
 /* eslint-disable react/button-has-type */
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import styled from "styled-components";
 
 const Btn = styled.button`
@@ -9,7 +9,7 @@ const Btn = styled.button`
     border-radius: 50px;
     cursor: pointer;
 
-    margin: 0 auto;
+    margin: 2.063rem 1.625rem 0 0.063rem;
     padding: 1.063rem 5.375rem 1.063rem 5.313rem;
     
     font-family: Inter;
@@ -26,10 +26,36 @@ const Btn = styled.button`
 const Container = styled.div`
     align-Items: center;
     justify-Content: center;
+    margin: 0 auto;
 `
 
 const Img = styled.img`
     margin: auto;
+`
+
+const InputFile = styled.input`
+    display: none;
+`
+
+const Label = styled.label`
+    background-color: #9a9a9a;
+    width: 16.875rem;
+    height: 4rem;
+    border-radius: 50px;
+    cursor: pointer;
+
+    margin: 2.063rem 1.625rem 0 0.063rem;
+    padding: 1.063rem 5.375rem 1.063rem 5.313rem;
+    
+    font-family: Inter;
+    font-size: 1.563rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
 `
 
 function Pictureupload() {
@@ -45,25 +71,27 @@ function Pictureupload() {
     };
 
     return (
-        <div>
+        <Container>
             <div>
                 {fileImage && (
                     <Img
                     alt = "sample"
                     src={fileImage} />
                 )}
-                <Container>
-                    <label htmlFor="image">
-                    <input
+                <div>
+                    <Label htmlFor="name">
+                        사진 선택
+                    <InputFile
+                    id="name"
                     name="imgUpload"
                     type="file"
                     accept="image/*"
                     onChange={saveFileImage} />
+                    </Label>
                     <Btn onClick={() => deleteFileImage()}>삭제</Btn>
-                    </label>
-                </Container>
+                </div>
             </div>
-        </div>
+        </Container>
     );
 }
 
