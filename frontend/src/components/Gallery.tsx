@@ -77,7 +77,6 @@ export default function Gallery() {
     <Container>
       <BMan>
         <img className="BMan" alt="bman" src="images/gallery_images/BMan.jpg" />
-        <p>BMan</p>
       </BMan>
       <BMan2>
         <img
@@ -85,7 +84,6 @@ export default function Gallery() {
           alt="bman"
           src="images/gallery_images/BMan2.jpg"
         />
-        <p>BMan2</p>
       </BMan2>
       <BMan3>
         <img
@@ -93,7 +91,6 @@ export default function Gallery() {
           alt="bman"
           src="images/gallery_images/BMan3.jpg"
         />
-        <p>BMan3</p>
       </BMan3>
       <Container>
         <BMan4>
@@ -102,7 +99,6 @@ export default function Gallery() {
             alt="bman"
             src="images/gallery_images/BMan4.jpg"
           />
-          <p>BMan3</p>
         </BMan4>
         <BMan5>
           <img
@@ -110,7 +106,6 @@ export default function Gallery() {
             alt="bman"
             src="images/gallery_images/BMan5.jpg"
           />
-          <p>BMan3</p>
         </BMan5>
         <BMan6>
           <img
@@ -118,7 +113,6 @@ export default function Gallery() {
             alt="bman"
             src="images/gallery_images/BMan6.jpg"
           />
-          <p>BMan3</p>
         </BMan6>
       </Container>
     </Container>
