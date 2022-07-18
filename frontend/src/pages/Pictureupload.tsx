@@ -1,12 +1,15 @@
 /* eslint-disable react/button-has-type */
 import React, {useState, useRef} from "react";
 import styled from "styled-components";
+import imageCompression from "browser-image-compression";
 
 const Btn = styled.button`
     background-color: #9a9a9a;
     width: 16.875rem;
     height: 4rem;
     border-radius: 50px;
+    border: 0;
+    outline: 0;
     cursor: pointer;
 
     margin: 2.063rem 1.625rem 0 0.063rem;
@@ -19,7 +22,7 @@ const Btn = styled.button`
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    text-align: left;
+    text-align: center;
     color: #fff;
 `;
 
@@ -60,6 +63,7 @@ const Label = styled.label`
 
 function Pictureupload() {
     const [fileImage, setFileImage] = useState("");
+    const [file, setFile] = useState(null);
 
     const saveFileImage = (e: any) => {
         setFileImage(URL.createObjectURL(e.target.files[0]));
@@ -69,6 +73,26 @@ function Pictureupload() {
         URL.revokeObjectURL(fileImage);
         setFileImage("");
     };
+
+    const handleFileOnChange = async (e: any) => {
+        const file = e.target.files[0];
+
+        const options = {
+            maxSizeMB: 2,
+            maxWidthOrHeight: 100
+        }
+
+        try {
+            const compressedFile = await imageCompression(file, options);
+
+            const promise = imageCompression.getDataUrlFromFile(compressedFile);
+            promise.then(result => {
+                setFileImage(result);
+            })
+        } catch(error) {
+            console.log(error);
+        }
+    }
 
     return (
         <Container>
@@ -86,7 +110,7 @@ function Pictureupload() {
                     name="imgUpload"
                     type="file"
                     accept="image/*"
-                    onChange={saveFileImage} />
+                    onChange={handleFileOnChange} />
                     </Label>
                     <Btn onClick={() => deleteFileImage()}>삭제</Btn>
                 </div>
