@@ -1,7 +1,8 @@
 /* eslint-disable react/button-has-type */
-import React, {useState, useRef} from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import imageCompression from "browser-image-compression";
+import {Link} from "react-router-dom";
 
 const Btn = styled.button`
     background-color: #9a9a9a;
@@ -63,7 +64,6 @@ const Label = styled.label`
 
 function Pictureupload() {
     const [fileImage, setFileImage] = useState("");
-    const [file, setFile] = useState(null);
 
     const saveFileImage = (e: any) => {
         setFileImage(URL.createObjectURL(e.target.files[0]));
@@ -79,7 +79,7 @@ function Pictureupload() {
 
         const options = {
             maxSizeMB: 2,
-            maxWidthOrHeight: 100
+            maxWidthOrHeight: 500
         }
 
         try {
@@ -112,6 +112,11 @@ function Pictureupload() {
                     accept="image/*"
                     onChange={handleFileOnChange} />
                     </Label>
+                    <Btn>
+                        <Link to = "/Style" style={{color: 'inherit', textDecoration: 'inherit'}}>
+                            사진 업로드
+                        </Link>
+                    </Btn>
                     <Btn onClick={() => deleteFileImage()}>삭제</Btn>
                 </div>
             </div>
