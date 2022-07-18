@@ -17,7 +17,7 @@ const Btn = styled.button`
     padding: 1.063rem 5.375rem 1.063rem 5.313rem;
     
     font-family: Inter;
-    font-size: 1.563rem;
+    font-size: 1.3rem;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -30,11 +30,15 @@ const Btn = styled.button`
 const Container = styled.div`
     align-Items: center;
     justify-Content: center;
-    margin: 0 auto;
+    display: flex;
 `
 
 const Img = styled.img`
-    margin: auto;
+    margin-top: 18.188rem;
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    border: 5px dashed #D9D9D9;
 `
 
 const InputFile = styled.input`
@@ -52,7 +56,7 @@ const Label = styled.label`
     padding: 1.063rem 5.375rem 1.063rem 5.313rem;
     
     font-family: Inter;
-    font-size: 1.563rem;
+    font-size: 1.3rem;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -60,6 +64,26 @@ const Label = styled.label`
     letter-spacing: normal;
     text-align: left;
     color: #fff;
+`
+
+const BtnContainer = styled.div`
+    position: absolute;
+    bottom: 8.25rem;
+    align-items: center;
+    justify-content: center;
+`
+
+const RuleBox = styled.div`
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 14.688rem;
+    height: 9.938rem;
+    margin: 17.625rem 0 16.125rem 5.75rem;
+    padding: 3.375rem 2.438rem 3.688rem 2.5rem;
+
+    background: #FFFFFF;
+    border: 5px dashed #C0BABA;
 `
 
 function Pictureupload() {
@@ -79,7 +103,7 @@ function Pictureupload() {
 
         const options = {
             maxSizeMB: 2,
-            maxWidthOrHeight: 500
+            maxWidthOrHeight: 500,
         }
 
         try {
@@ -95,32 +119,35 @@ function Pictureupload() {
     }
 
     return (
+        <div>
+            <RuleBox>
+                <p>규격 안내문</p>
+            </RuleBox>
         <Container>
-            <div>
-                {fileImage && (
-                    <Img
-                    alt = "sample"
-                    src={fileImage} />
-                )}
-                <div>
-                    <Label htmlFor="name">
-                        사진 선택
-                    <InputFile
-                    id="name"
-                    name="imgUpload"
-                    type="file"
-                    accept="image/*"
-                    onChange={handleFileOnChange} />
-                    </Label>
-                    <Btn>
-                        <Link to = "/Style" style={{color: 'inherit', textDecoration: 'inherit'}}>
-                            사진 업로드
-                        </Link>
-                    </Btn>
-                    <Btn onClick={() => deleteFileImage()}>삭제</Btn>
-                </div>
-            </div>
+            {fileImage && (
+                <Img
+                alt = "sample"
+                src={fileImage} />
+            )}
+            <BtnContainer>
+                <Label htmlFor="name">
+                    사진 선택
+                <InputFile
+                id="name"
+                name="imgUpload"
+                type="file"
+                accept="image/*"
+                onChange={handleFileOnChange} />
+                </Label>
+                <Btn>
+                    <Link to = "/Style" style={{color: 'inherit', textDecoration: 'inherit'}}>
+                        사진 업로드
+                    </Link>
+                </Btn>
+                <Btn onClick={() => deleteFileImage()}>삭제</Btn>
+            </BtnContainer>
         </Container>
+        </div>
     );
 }
 
