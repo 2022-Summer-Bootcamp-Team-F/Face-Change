@@ -53,11 +53,10 @@ const Sentence2 = styled.p`
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: left;
   color: #000;
 
-  margin-top: 50px;
-  margin-left: 15%;
+  margin: 0 auto;
+  margin-top: 3rem;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -71,6 +70,7 @@ const Btn = styled.button`
   background-color: #4354f5;
 
   margin: 0 auto;
+  margin-top: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,14 +90,10 @@ export default function Error() {
   return (
     <ErrorBackImg>
       <ErrorIcon className="Cartoon" alt="cartoon" src="images/ErrorIcon.png" />
-      <div className="Comment">
-        <Sentence className="sentence1">오류</Sentence>
-      </div>
-      <div className="Comment2">
-        <Sentence2 className="sentence2">
-          만화 그리기에 실패했습니다. 다른 사진으로 다시 시도해보세요.
-        </Sentence2>
-      </div>
+      <Sentence className="sentence1">오류</Sentence>
+      <Sentence2 className="sentence2">
+        만화 그리기에 실패했습니다. 다른 사진으로 다시 시도해보세요.
+      </Sentence2>
       <Btn>
         <Link
           to="/Pictureupload"
