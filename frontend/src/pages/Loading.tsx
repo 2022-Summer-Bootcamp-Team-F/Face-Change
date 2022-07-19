@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Header from "../components/Header";
 
 const LoadingMent = styled.div`
     width: 45.313rem;
@@ -35,6 +36,7 @@ const Img = styled.img`
 export default function Loading() {
     return(
         <div>
+            <Header />
             <Img
             alt="spinner"
             src="images/spinner.png"/>
