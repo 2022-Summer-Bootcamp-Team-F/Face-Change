@@ -11,22 +11,23 @@ const ErrorBackImg = styled.div`
   background-size: cover;
 `;
 
-const ErrorIcon = styled.div`
-  width: 15rem;
-  height: 15rem;
+const ErrorIcon = styled.img`
+  width: 21.375rem;
+  height: 24.438rem;
   margin: 0 auto;
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
   text-align: center;
   font-size: 3rem;
-
-  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 `;
 
 const Sentence = styled.p`
-  width: 31.125rem;
-  height: 4.813rem;
+  width: 11.063rem;
+  height: 7.25rem;
   font-family: Inter;
   font-size: 6rem;
   font-weight: 500;
@@ -43,18 +44,20 @@ const Sentence = styled.p`
 `;
 
 const Sentence2 = styled.p`
-  width: 100rem;
-  height: 4.813rem;
+  width: 65rem;
+  height: 3rem;
   font-family: Inter;
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+  text-align: left;
   color: #000;
 
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-left: 15%;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -86,25 +89,23 @@ const Btn = styled.button`
 export default function Error() {
   return (
     <ErrorBackImg>
-      <ErrorIcon>
-        <img className="Cartoon" alt="cartoon" src="images/ErrorIcon.png" />
-        <div className="Comment">
-          <Sentence className="sentence1">오류</Sentence>
-        </div>
-        <div className="Comment2">
-          <Sentence2 className="sentence2">
-            만화 그리기에 실패했습니다. 다른 사진으로 다시 시도해보세요.
-          </Sentence2>
-        </div>
-        <Btn>
-          <Link
-            to="/Pictureupload"
-            style={{ color: 'inherit', textDecoration: 'inherit' }}
-          >
-            사진 재 선택
-          </Link>
-        </Btn>
-      </ErrorIcon>
+      <ErrorIcon className="Cartoon" alt="cartoon" src="images/ErrorIcon.png" />
+      <div className="Comment">
+        <Sentence className="sentence1">오류</Sentence>
+      </div>
+      <div className="Comment2">
+        <Sentence2 className="sentence2">
+          만화 그리기에 실패했습니다. 다른 사진으로 다시 시도해보세요.
+        </Sentence2>
+      </div>
+      <Btn>
+        <Link
+          to="/Pictureupload"
+          style={{ color: 'inherit', textDecoration: 'inherit' }}
+        >
+          사진 재 선택
+        </Link>
+      </Btn>
     </ErrorBackImg>
   );
 }
