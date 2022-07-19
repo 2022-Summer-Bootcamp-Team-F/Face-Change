@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../components/Header";
+import BackgroundImage from "../components/BackgroundImage";
 
 const LoadingMent = styled.div`
     width: 45.313rem;
@@ -29,13 +30,13 @@ const Img = styled.img`
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 15rem;
+    margin-top: 5rem;
 `
 
 
 export default function Loading() {
     return(
-        <div>
+        <BackgroundImage>
             <Header />
             <Img
             alt="spinner"
@@ -44,6 +45,6 @@ export default function Loading() {
                 당신을 위한 만화를 그리고 있습니다.
                 잠시만 기다려 주세요...
             </LoadingMent>
-        </div>
+        </BackgroundImage>
     );
 }
