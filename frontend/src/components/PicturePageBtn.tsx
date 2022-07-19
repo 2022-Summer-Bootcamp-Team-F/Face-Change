@@ -45,7 +45,7 @@ const CircleContainer = styled.div`
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #4354f5;
+  fill: #4354f5;
 `
 
 export default function PicturePageBtn() {
