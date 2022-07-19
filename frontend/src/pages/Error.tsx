@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
@@ -49,7 +50,20 @@ export default function Error() {
         <div className="Comment">
           <Sentence className="sentence1">오류</Sentence>
         </div>
+        <div className="Comment2">
+          <Sentence className="sentence2">
+            만화 그리기에 실패했습니다. 다른 사진으로 다시 시도해보세요.
+          </Sentence>
+        </div>
       </ErrorIcon>
+      <button>
+        <Link
+          to="/Pictureupload"
+          style={{ color: 'inherit', textDecoration: 'inherit' }}
+        >
+          사진 재 선택
+        </Link>
+      </button>
     </ErrorBackImg>
   );
 }
