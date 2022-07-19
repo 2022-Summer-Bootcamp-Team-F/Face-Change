@@ -23,13 +23,33 @@ const ErrorIcon = styled.div`
   position: relative;
 `;
 
+const Sentence = styled.p`
+  width: 31.125rem;
+  height: 4.813rem;
+  font-family: Inter;
+  font-size: 4rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+`;
+
 export default function Error() {
   return (
     <ErrorBackImg>
       <ErrorIcon>
         <img className="Cartoon" alt="cartoon" src="images/ErrorIcon.png" />
+        <div className="Comment">
+          <Sentence className="sentence1">오류</Sentence>
+        </div>
       </ErrorIcon>
-      <div>error</div>
     </ErrorBackImg>
   );
 }
