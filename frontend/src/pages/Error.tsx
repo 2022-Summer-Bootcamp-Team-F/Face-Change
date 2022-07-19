@@ -42,6 +42,24 @@ const Sentence = styled.p`
   align-items: center;
 `;
 
+const Sentence2 = styled.p`
+  width: 44.688rem;
+  height: 4.813rem;
+  font-family: Inter;
+  font-size: 4rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+`;
+
 export default function Error() {
   return (
     <ErrorBackImg>
@@ -51,9 +69,9 @@ export default function Error() {
           <Sentence className="sentence1">오류</Sentence>
         </div>
         <div className="Comment2">
-          <Sentence className="sentence2">
+          <Sentence2 className="sentence2">
             만화 그리기에 실패했습니다. 다른 사진으로 다시 시도해보세요.
-          </Sentence>
+          </Sentence2>
         </div>
       </ErrorIcon>
       <button>
