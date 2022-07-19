@@ -7,10 +7,11 @@ const Container = styled.div`
 `;
 
 const BMan = styled.section`
-  width: 24.313rem;
-  height: 21.938rem;
+  width: 24rem;
+  height: 23rem;
+  border: 6px solid;
   margin: 0 auto;
-  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
+  padding: 2rem 2.5rem 1rem 2rem;
   object-fit: contain;
   border-radius: 50px;
   text-align: center;
@@ -18,10 +19,11 @@ const BMan = styled.section`
 `;
 
 const BMan2 = styled.section`
-  width: 24.25rem;
-  height: 21.938rem;
+  width: 24rem;
+  height: 23rem;
+  border: 6px solid;
   margin: 0 auto;
-  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
+  padding: 2rem 2.5rem 1rem 2rem;
   object-fit: contain;
   border-radius: 50px;
   text-align: center;
@@ -29,10 +31,11 @@ const BMan2 = styled.section`
 `;
 
 const BMan3 = styled.section`
-  width: 24.313rem;
-  height: 21.938rem;
+  width: 24rem;
+  height: 23rem;
+  border: 6px solid;
   margin: 0 auto;
-  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
+  padding: 2rem 2.5rem 1rem 2rem;
   object-fit: contain;
   border-radius: 50px;
   text-align: center;
@@ -40,10 +43,11 @@ const BMan3 = styled.section`
 `;
 
 const BMan4 = styled.section`
-  width: 24.313rem;
-  height: 21.938rem;
-  margin: 0 auto;
-  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
+  width: 24rem;
+  height: 23rem;
+  border: 6px solid;
+  margin: 84px;
+  padding: 2rem 2.5rem 1rem 2rem;
   object-fit: contain;
   border-radius: 50px;
   text-align: center;
@@ -51,10 +55,11 @@ const BMan4 = styled.section`
 `;
 
 const BMan5 = styled.section`
-  width: 24.25rem;
-  height: 21.938rem;
-  margin: 0 auto;
-  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
+  width: 24rem;
+  height: 23rem;
+  border: 6px solid;
+  margin: 84px;
+  padding: 2rem 2.5rem 1rem 2rem;
   object-fit: contain;
   border-radius: 50px;
   text-align: center;
@@ -62,10 +67,11 @@ const BMan5 = styled.section`
 `;
 
 const BMan6 = styled.section`
-  width: 24.313rem;
-  height: 21.938rem;
-  margin: 0 auto;
-  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
+  width: 24rem;
+  height: 23rem;
+  border: 6px solid;
+  margin: 84px;
+  padding: 2rem 2.5rem 1rem 2rem;
   object-fit: contain;
   border-radius: 50px;
   text-align: center;
