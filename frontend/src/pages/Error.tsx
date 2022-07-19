@@ -28,7 +28,7 @@ const Sentence = styled.p`
   width: 31.125rem;
   height: 4.813rem;
   font-family: Inter;
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -43,7 +43,7 @@ const Sentence = styled.p`
 `;
 
 const Sentence2 = styled.p`
-  width: 44.688rem;
+  width: 100rem;
   height: 4.813rem;
   font-family: Inter;
   font-size: 4rem;
@@ -54,10 +54,33 @@ const Sentence2 = styled.p`
   letter-spacing: normal;
   color: #000;
 
-  margin: 0 auto;
+  margin-top: 100px;
   text-align: center;
   justify-content: center;
   align-items: center;
+`;
+
+const Btn = styled.button`
+  width: 16.875rem;
+  height: 4rem;
+  padding: 1.063rem 4.5rem 1.063rem 4.375rem;
+  border-radius: 50px;
+  background-color: #4354f5;
+
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Inter;
+  font-size: 1.563rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
 `;
 
 export default function Error() {
@@ -73,15 +96,15 @@ export default function Error() {
             만화 그리기에 실패했습니다. 다른 사진으로 다시 시도해보세요.
           </Sentence2>
         </div>
+        <Btn>
+          <Link
+            to="/Pictureupload"
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
+          >
+            사진 재 선택
+          </Link>
+        </Btn>
       </ErrorIcon>
-      <button>
-        <Link
-          to="/Pictureupload"
-          style={{ color: 'inherit', textDecoration: 'inherit' }}
-        >
-          사진 재 선택
-        </Link>
-      </button>
     </ErrorBackImg>
   );
 }
