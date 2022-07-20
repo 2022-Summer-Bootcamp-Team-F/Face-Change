@@ -1,6 +1,6 @@
 /* eslint-disable react/button-has-type */
 import React from "react";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import BackgroundImage from "../components/BackgroundImage";
 
@@ -26,10 +26,20 @@ export default function Results() {
       </div>
       <div className="Container flex justify-center items-center mt-20">
         <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ...">
-          업로드 이동
+          <Link
+            to="/Pictureupload"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            업로드 이동
+          </Link>
         </button>
         <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
-          선택 이동
+          <Link
+            to="/Style"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            선택 이동
+          </Link>
         </button>
         <button className="h-10 w-40 rounded-2xl bg-purple-600 text-white ml-4 ...">
           저장하기
