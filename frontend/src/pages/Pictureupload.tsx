@@ -133,7 +133,6 @@ function Pictureupload() {
                 src={fileImage} />
             )}
             <BtnContainer>
-                <h1 className="text-3xl font-bold underline">Hello World!</h1>
                 <Label htmlFor="name">
                     사진 선택
                 <InputFile
