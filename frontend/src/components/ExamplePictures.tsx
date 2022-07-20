@@ -3,6 +3,7 @@ import styled, {keyframes} from "styled-components";
 
 const Container = styled.div`
   display: flex;
+  margin-top: 5rem;
 `;
 
 const FadeIn = keyframes`
@@ -26,7 +27,7 @@ const FadeOut = keyframes`
 const Cartoon = styled.div`
   width: 18.75rem;
   height: 18.75rem;
-  margin: 3.938rem 7.688rem 0.875rem 5.125rem;
+  margin: 0 auto;
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
@@ -39,7 +40,7 @@ const Cartoon = styled.div`
 const Caricature = styled.div`
   width: 18.75rem;
   height: 18.75rem;
-  margin: 3.938rem 7.688rem 0.875rem 5.125rem;
+  margin: 0 auto;
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
@@ -52,7 +53,7 @@ const Caricature = styled.div`
 const Anime = styled.div`
   width: 18.75rem;
   height: 18.75rem;
-  margin: 3.938rem 7.688rem 0.875rem 5.125rem;
+  margin: 0 auto;
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
