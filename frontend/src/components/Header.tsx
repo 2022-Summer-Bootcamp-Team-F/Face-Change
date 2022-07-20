@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Logo = styled.section`
-  padding: 30px;
+  padding: 50px;
+  display: flex;
 `;
 
 export default function Header() {
