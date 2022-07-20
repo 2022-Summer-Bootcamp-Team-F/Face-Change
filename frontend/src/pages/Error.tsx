@@ -13,10 +13,10 @@ const ErrorBackImg = styled.div`
 
 const ErrorIcon = styled.img`
   width: 21.375rem;
-  height: 24.438rem;
+  height: 24rem;
   margin: 0 auto;
-  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
-  object-fit: contain;
+  padding: 1rem 2.5rem 1rem 1rem;
+  object-fit: scale-down;
   border-radius: 100px;
   text-align: center;
   font-size: 3rem;
@@ -26,10 +26,10 @@ const ErrorIcon = styled.img`
 `;
 
 const Sentence = styled.p`
-  width: 11.063rem;
+  /* width: 11.063rem; */
   height: 7.25rem;
   font-family: Inter;
-  font-size: 6rem;
+  font-size: clamp(2rem, 10vw, 4rem);
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -44,10 +44,10 @@ const Sentence = styled.p`
 `;
 
 const Sentence2 = styled.p`
-  width: 65rem;
+  /* width: 65rem; */
   height: 3rem;
   font-family: Inter;
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 10vw, 2.5rem);
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -56,7 +56,7 @@ const Sentence2 = styled.p`
   color: #000;
 
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 1rem;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -65,12 +65,12 @@ const Sentence2 = styled.p`
 const Btn = styled.button`
   width: 16.875rem;
   height: 4rem;
-  padding: 1.063rem 4.5rem 1.063rem 4.375rem;
+  /* padding: 1.063rem 4.5rem 1.063rem 4.375rem; */
   border-radius: 50px;
   background-color: #4354f5;
 
   margin: 0 auto;
-  margin-top: 5rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
