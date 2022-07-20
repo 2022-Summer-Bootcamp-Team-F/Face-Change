@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
 
 const Container = styled.div`
   display: flex;
@@ -56,6 +57,8 @@ const Btn = styled.button`
 
   margin: 2.063rem 1.625rem 0 0.063rem;
   padding: 1.063rem 5.375rem 1.063rem 5.313rem;
+  justify-content: center;
+  align-items: center;
 
   font-family: Inter;
   font-size: 1.3rem;
@@ -70,6 +73,7 @@ const Btn = styled.button`
 
 const BtnContainer = styled.div`
   position: absolute;
+  margin-left: 30%;
   bottom: 8.25rem;
   align-items: center;
   justify-content: center;
@@ -78,6 +82,7 @@ const BtnContainer = styled.div`
 export default function Style() {
   return (
     <Container>
+      <AiFillCaretLeft size="w-7 h-6 " />
       <Cartoon>
         <img className="Cartoon" alt="cartoon" src="images/cartoon2.png" />
         <p>cartoon</p>
@@ -94,6 +99,7 @@ export default function Style() {
         <img className="anime" alt="anime" src="images/anime2.png" />
         <p>anime</p>
       </Anime>
+      <AiFillCaretRight size="w-7 h-6 " />
       <BtnContainer>
         <Btn>
           <Link
