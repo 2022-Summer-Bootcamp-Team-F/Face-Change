@@ -82,24 +82,32 @@ const BtnContainer = styled.div`
 export default function Style() {
   return (
     <Container>
-      <AiFillCaretLeft size="w-7 h-6 " />
+      <AiFillCaretLeft className="w-80 h-80" />
       <Cartoon>
-        <img className="Cartoon" alt="cartoon" src="images/cartoon2.png" />
+        <img
+          className="Cartoon"
+          alt="cartoon"
+          src="images/stylegallery_img/cartoons.png"
+        />
         <p>cartoon</p>
       </Cartoon>
       <Caricature>
         <img
           className="Caricature"
           alt="caricature"
-          src="images/caricature2.png"
+          src="images//stylegallery_img/caricatures.png"
         />
         <p>caricature</p>
       </Caricature>
       <Anime>
-        <img className="anime" alt="anime" src="images/anime2.png" />
+        <img
+          className="anime"
+          alt="anime"
+          src="images//stylegallery_img/animes.png"
+        />
         <p>anime</p>
       </Anime>
-      <AiFillCaretRight size="w-7 h-6 " />
+      <AiFillCaretRight className="w-80 h-80" />
       <BtnContainer>
         <Btn>
           <Link
