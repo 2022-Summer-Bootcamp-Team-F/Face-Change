@@ -1,21 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Container = styled.div`
   display: flex;
 `;
 
+const Sentence = styled.p`
+  width: 12rem;
+  height: 7.25rem;
+  font-family: Inter;
+  font-size: clamp(1.3rem, 10vw, 1rem);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+`;
+
 const Cartoon = styled.div`
   width: 18.75rem;
   height: 18.75rem;
-  margin: 3.938rem 7.688rem 0.875rem 5.125rem;
+  margin: 0 auto;
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
   text-align: center;
-  font-size: 3rem;
+  font-size: 1rem;
 
   position: relative;
 `;
@@ -23,12 +40,12 @@ const Cartoon = styled.div`
 const Caricature = styled.div`
   width: 18.75rem;
   height: 18.75rem;
-  margin: 3.938rem 7.688rem 0.875rem 5.125rem;
+  margin: 0 auto;
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
   text-align: center;
-  font-size: 3rem;
+  font-size: 1rem;
 
   position: relative;
 `;
@@ -36,12 +53,12 @@ const Caricature = styled.div`
 const Anime = styled.div`
   width: 18.75rem;
   height: 18.75rem;
-  margin: 3.938rem 7.688rem 0.875rem 5.125rem;
+  margin: 0 auto;
   padding: 4.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
   text-align: center;
-  font-size: 3rem;
+  font-size: 1rem;
 
   position: relative;
 `;
@@ -56,19 +73,9 @@ const Btn = styled.button`
   cursor: pointer;
 
   margin: 2.063rem 1.625rem 0 0.063rem;
-  padding: 1.063rem 5.375rem 1.063rem 5.313rem;
+  padding: 1.063rem 5.375rem 1.063rem 2.5rem;
   justify-content: center;
   align-items: center;
-
-  font-family: Inter;
-  font-size: 1.3rem;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #fff;
 `;
 
 const BtnContainer = styled.div`
@@ -82,42 +89,78 @@ const BtnContainer = styled.div`
 export default function Style() {
   return (
     <Container>
-      <AiFillCaretLeft className="w-80 h-80" />
+      <AiFillCaretLeft className="left" color="black" size="30rem" />
+      {/* <Carousel className="flex"> */}
       <Cartoon>
+        <p>cartoon</p>
         <img
           className="Cartoon"
           alt="cartoon"
           src="images/stylegallery_img/cartoons.png"
         />
-        <p>cartoon</p>
       </Cartoon>
       <Caricature>
+        <p>caricature</p>
         <img
           className="Caricature"
           alt="caricature"
           src="images//stylegallery_img/caricatures.png"
         />
-        <p>caricature</p>
       </Caricature>
       <Anime>
+        <p>anime</p>
         <img
           className="anime"
           alt="anime"
           src="images//stylegallery_img/animes.png"
         />
-        <p>anime</p>
       </Anime>
-      <AiFillCaretRight className="w-80 h-80" />
+      <Cartoon>
+        <p>cartoon</p>
+        <img
+          className="Cartoon"
+          alt="cartoon"
+          src="images/stylegallery_img/cartoons2.png"
+        />
+      </Cartoon>
+      <Caricature>
+        <p>caricature</p>
+        <img
+          className="Caricature"
+          alt="caricature"
+          src="images//stylegallery_img/caricatures2.png"
+        />
+      </Caricature>
+      <Anime>
+        <p>anime</p>
+        <img
+          className="anime"
+          alt="anime"
+          src="images//stylegallery_img/animes2.png"
+        />
+      </Anime>
+      <Cartoon>
+        <p>cartoon</p>
+        <img
+          className="Cartoon"
+          alt="cartoon"
+          src="images/stylegallery_img/cartoons3.png"
+        />
+      </Cartoon>
+      {/* </Carousel> */}
+      <AiFillCaretRight className="left" color="black" size="30rem" />
       <BtnContainer>
         <Btn>
           <Link
             to="/Pictureupload"
             style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
-            사진 선택으로 돌아가기
+            <Sentence>사진 선택으로 돌아가기</Sentence>
           </Link>
         </Btn>
-        <Btn>화풍 선택</Btn>
+        <Btn>
+          <Sentence>화풍 선택</Sentence>
+        </Btn>
       </BtnContainer>
     </Container>
   );
