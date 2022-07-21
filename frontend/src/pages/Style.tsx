@@ -71,7 +71,7 @@ export default function Style() {
       <Header />
       {/* <AiFillCaretLeft className="left" color="black" size="20rem" /> */}
       <div className="flex items-center justify-center ">
-        <Carousel showArrows width="30rem" showThumbs={false}>
+        <Carousel showArrows width="30rem" showThumbs={false} infiniteLoop>
           <ChangeImage>
             <p>cartoon</p>
             <img
