@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
+import Header from '../components/Header';
+// import BackgroundImage from '../components/BackgroundImage';
+// import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
+// import 'react-responsive-carousel/lib/styles/carousel.min.css';
+// import { Carousel } from 'react-responsive-carousel';
 
 const Container = styled.div`
   display: flex;
 `;
+
+const list = [
+  { id: '1', key: '1', img: 'images/cartoons.png' },
+  { id: '2', key: '2', img: 'images/caricatures.png' },
+  { id: '3', key: '3', img: 'images/animes.png' },
+  { id: '4', key: '4', img: 'images/cartoons2.png' },
+  { id: '5', key: '5', img: 'images/caricatures2.png' },
+  { id: '6', key: '6', img: 'images/animes2.png' },
+  { id: '7', key: '7', img: 'images/cartoons3.png' },
+];
 
 const Sentence = styled.p`
   width: 12rem;
@@ -22,33 +34,7 @@ const Sentence = styled.p`
   color: #ffffff;
 `;
 
-const Cartoon = styled.div`
-  width: 18.75rem;
-  height: 18.75rem;
-  margin: 0 auto;
-  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
-  object-fit: contain;
-  border-radius: 100px;
-  text-align: center;
-  font-size: 1rem;
-
-  position: relative;
-`;
-
-const Caricature = styled.div`
-  width: 18.75rem;
-  height: 18.75rem;
-  margin: 0 auto;
-  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
-  object-fit: contain;
-  border-radius: 100px;
-  text-align: center;
-  font-size: 1rem;
-
-  position: relative;
-`;
-
-const Anime = styled.div`
+const ChangeImage = styled.div`
   width: 18.75rem;
   height: 18.75rem;
   margin: 0 auto;
@@ -87,66 +73,67 @@ const BtnContainer = styled.div`
 export default function Style() {
   return (
     <Container>
-      <AiFillCaretLeft className="left" color="black" size="20rem" />
+      <Header />
+      {/* <AiFillCaretLeft className="left" color="black" size="20rem" /> */}
       {/* <Carousel className="flex"> */}
-      <Cartoon>
+      <ChangeImage>
         <p>cartoon</p>
         <img
           className="Cartoon"
           alt="cartoon"
           src="images/stylegallery_img/cartoons.png"
         />
-      </Cartoon>
-      <Caricature>
+      </ChangeImage>
+      <ChangeImage>
         <p>caricature</p>
         <img
           className="Caricature"
           alt="caricature"
           src="images//stylegallery_img/caricatures.png"
         />
-      </Caricature>
-      <Anime>
+      </ChangeImage>
+      <ChangeImage>
         <p>anime</p>
         <img
           className="anime"
           alt="anime"
           src="images//stylegallery_img/animes.png"
         />
-      </Anime>
-      <Cartoon>
+      </ChangeImage>
+      <ChangeImage>
         <p>cartoon</p>
         <img
           className="Cartoon"
           alt="cartoon"
           src="images/stylegallery_img/cartoons2.png"
         />
-      </Cartoon>
-      <Caricature>
+      </ChangeImage>
+      <ChangeImage>
         <p>caricature</p>
         <img
           className="Caricature"
           alt="caricature"
           src="images//stylegallery_img/caricatures2.png"
         />
-      </Caricature>
-      <Anime>
+      </ChangeImage>
+      <ChangeImage>
         <p>anime</p>
         <img
           className="anime"
           alt="anime"
           src="images//stylegallery_img/animes2.png"
         />
-      </Anime>
-      <Cartoon>
+      </ChangeImage>
+      <ChangeImage>
         <p>cartoon</p>
         <img
           className="Cartoon"
           alt="cartoon"
           src="images/stylegallery_img/cartoons3.png"
         />
-      </Cartoon>
+      </ChangeImage>
       {/* </Carousel> */}
-      <AiFillCaretRight className="left" color="black" size="20rem" />
+      {/* <AiFillCaretRight className="left" color="black" size="20rem" /> */}
       <BtnContainer>
         <Btn>
           <Link
