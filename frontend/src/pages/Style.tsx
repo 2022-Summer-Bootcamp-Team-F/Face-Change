@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
 // import BackgroundImage from '../components/BackgroundImage';
 // import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
-// import 'react-responsive-carousel/lib/styles/carousel.min.css';
-// import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.css';
+import '../components/carousel copy.css';
+import { Carousel } from 'react-responsive-carousel';
+import Header from '../components/Header';
 
 const BackgroundImage = styled.div`
   background-image: url('images/background.png');
@@ -69,64 +70,66 @@ export default function Style() {
     <BackgroundImage>
       <Header />
       {/* <AiFillCaretLeft className="left" color="black" size="20rem" /> */}
-      {/* <Carousel className="flex"> */}
-      <ChangeImage>
-        <p>cartoon</p>
-        <img
-          className="Cartoon"
-          alt="cartoon"
-          src="images/stylegallery_img/cartoons.png"
-        />
-      </ChangeImage>
-      <ChangeImage>
-        <p>caricature</p>
-        <img
-          className="Caricature"
-          alt="caricature"
-          src="images//stylegallery_img/caricatures.png"
-        />
-      </ChangeImage>
-      <ChangeImage>
-        <p>anime</p>
-        <img
-          className="anime"
-          alt="anime"
-          src="images//stylegallery_img/animes.png"
-        />
-      </ChangeImage>
-      <ChangeImage>
-        <p>cartoon</p>
-        <img
-          className="Cartoon"
-          alt="cartoon"
-          src="images/stylegallery_img/cartoons2.png"
-        />
-      </ChangeImage>
-      <ChangeImage>
-        <p>caricature</p>
-        <img
-          className="Caricature"
-          alt="caricature"
-          src="images//stylegallery_img/caricatures2.png"
-        />
-      </ChangeImage>
-      <ChangeImage>
-        <p>anime</p>
-        <img
-          className="anime"
-          alt="anime"
-          src="images//stylegallery_img/animes2.png"
-        />
-      </ChangeImage>
-      <ChangeImage>
-        <p>cartoon</p>
-        <img
-          className="Cartoon"
-          alt="cartoon"
-          src="images/stylegallery_img/cartoons3.png"
-        />
-      </ChangeImage>
-      {/* </Carousel> */}
+      <div className="flex items-center justify-center">
+        <Carousel showArrows width="30rem" showThumbs={false}>
+          <ChangeImage>
+            <p>cartoon</p>
+            <img
+              className="Cartoon"
+              alt="cartoon"
+              src="images/stylegallery_img/cartoons.png"
+            />
+          </ChangeImage>
+          <ChangeImage>
+            <p>caricature</p>
+            <img
+              className="Caricature"
+              alt="caricature"
+              src="images//stylegallery_img/caricatures.png"
+            />
+          </ChangeImage>
+          <ChangeImage>
+            <p>anime</p>
+            <img
+              className="anime"
+              alt="anime"
+              src="images//stylegallery_img/animes.png"
+            />
+          </ChangeImage>
+          <ChangeImage>
+            <p>cartoon</p>
+            <img
+              className="Cartoon"
+              alt="cartoon"
+              src="images/stylegallery_img/cartoons2.png"
+            />
+          </ChangeImage>
+          <ChangeImage>
+            <p>caricature</p>
+            <img
+              className="Caricature"
+              alt="caricature"
+              src="images//stylegallery_img/caricatures2.png"
+            />
+          </ChangeImage>
+          <ChangeImage>
+            <p>anime</p>
+            <img
+              className="anime"
+              alt="anime"
+              src="images//stylegallery_img/animes2.png"
+            />
+          </ChangeImage>
+          <ChangeImage>
+            <p>cartoon</p>
+            <img
+              className="Cartoon"
+              alt="cartoon"
+              src="images/stylegallery_img/cartoons3.png"
+            />
+          </ChangeImage>
+        </Carousel>
+      </div>
       {/* <AiFillCaretRight className="left" color="black" size="20rem" /> */}
       <BtnContainer>
         <Btn>
