@@ -7,8 +7,12 @@ import Header from '../components/Header';
 // import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // import { Carousel } from 'react-responsive-carousel';
 
-const Container = styled.div`
-  display: flex;
+const BackgroundImage = styled.div`
+  background-image: url('images/background.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const list = [
@@ -72,7 +76,7 @@ const BtnContainer = styled.div`
 
 export default function Style() {
   return (
-    <Container>
+    <BackgroundImage>
       <Header />
       {/* <AiFillCaretLeft className="left" color="black" size="20rem" /> */}
       {/* <Carousel className="flex"> */}
@@ -147,6 +151,6 @@ export default function Style() {
           <Sentence>화풍 선택</Sentence>
         </Btn>
       </BtnContainer>
-    </Container>
+    </BackgroundImage>
   );
 }
