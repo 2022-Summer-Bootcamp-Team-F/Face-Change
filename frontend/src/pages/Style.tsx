@@ -15,16 +15,6 @@ const BackgroundImage = styled.div`
   background-size: cover;
 `;
 
-const list = [
-  { id: '1', key: '1', img: 'images/cartoons.png' },
-  { id: '2', key: '2', img: 'images/caricatures.png' },
-  { id: '3', key: '3', img: 'images/animes.png' },
-  { id: '4', key: '4', img: 'images/cartoons2.png' },
-  { id: '5', key: '5', img: 'images/caricatures2.png' },
-  { id: '6', key: '6', img: 'images/animes2.png' },
-  { id: '7', key: '7', img: 'images/cartoons3.png' },
-];
-
 const Sentence = styled.p`
   width: 12rem;
   height: 7.25rem;
