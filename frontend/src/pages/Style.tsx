@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 const Container = styled.div`
   display: flex;
@@ -89,7 +87,7 @@ const BtnContainer = styled.div`
 export default function Style() {
   return (
     <Container>
-      <AiFillCaretLeft className="left" color="black" size="30rem" />
+      <AiFillCaretLeft className="left" color="black" size="20rem" />
       {/* <Carousel className="flex"> */}
       <Cartoon>
         <p>cartoon</p>
@@ -148,7 +146,7 @@ export default function Style() {
         />
       </Cartoon>
       {/* </Carousel> */}
-      <AiFillCaretRight className="left" color="black" size="30rem" />
+      <AiFillCaretRight className="left" color="black" size="20rem" />
       <BtnContainer>
         <Btn>
           <Link
