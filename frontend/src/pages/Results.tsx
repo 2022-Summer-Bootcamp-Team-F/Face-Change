@@ -1,5 +1,5 @@
 /* eslint-disable react/button-has-type */
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import BackgroundImage from "../components/BackgroundImage";
@@ -10,15 +10,14 @@ export default function Results() {
       <Header />
       <div className="container flex justify-center items-center m-auto">
         <div className="overflow-auto h-80 w-12">
-          <img alt="" src="images/palette.png" />
-          <img alt="" src="images/palette.png" />
-          <img alt="" src="images/palette.png" />
-          <img alt="" src="images/palette.png" />
-          <img alt="" src="images/palette.png" />
-          <img alt="" src="images/palette.png" />
-          <img alt="" src="images/palette.png" />
-          <img alt="" src="images/palette.png" />
-          <img alt="" src="images/palette.png" />
+          <img className="mt-2" alt="" src="images/palette.png" />
+          <img className="mt-2" alt="" src="images/caricature2.png" />
+          <img className="mt-2" alt="" src="images/logo.png" />
+          <img className="mt-2" alt="" src="images/slider.png" />
+          <img className="mt-2" alt="" src="images/anime2.png" />
+          <img className="mt-2" alt="" src="images/cartoon2.png" />
+          <img className="mt-2" alt="" src="images/background.png" />
+          <img className="mt-2" alt="" src="images/Spinner.png" />
         </div>
         <div className="flex justify-center items-center border-dotted h-80 w-80 p-4 border-4 ml-3 ...">
           <p>결과 이미지</p>
