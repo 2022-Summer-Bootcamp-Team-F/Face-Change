@@ -59,8 +59,8 @@ const Btn = styled.button`
 
 const BtnContainer = styled.div`
   position: absolute;
-  margin-left: 30%;
-  bottom: 8.25rem;
+  margin-left: 35%;
+  bottom: 15rem;
   align-items: center;
   justify-content: center;
 `;
@@ -70,7 +70,7 @@ export default function Style() {
     <BackgroundImage>
       <Header />
       {/* <AiFillCaretLeft className="left" color="black" size="20rem" /> */}
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center ">
         <Carousel showArrows width="30rem" showThumbs={false}>
           <ChangeImage>
             <p>cartoon</p>
