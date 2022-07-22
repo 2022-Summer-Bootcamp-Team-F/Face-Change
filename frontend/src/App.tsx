@@ -5,7 +5,7 @@ import Main from './pages/Main';
 import Pictureupload from './pages/Pictureupload';
 import Style from './pages/Style';
 import Results from './pages/Results';
-import Roading from './pages/Roading';
+import Loading from './pages/Loading';
 import Error from './pages/Error';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Route path="/pictureupload" element={<Pictureupload/>}/>
         <Route path="/style" element={<Style/>}/>
         <Route path="/results" element={<Results/>}/>
-        <Route path="/roading" element={<Roading/>}/>
+        <Route path="/loading" element={<Loading/>}/>
         <Route path="/error" element={<Error/>}/>
       </Routes>
     </BrowserRouter>

@@ -3,6 +3,8 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import imageCompression from "browser-image-compression";
 import {Link} from "react-router-dom";
+import Header from "../components/Header";
+import BackgroundImage from "../components/BackgroundImage";
 
 const Btn = styled.button`
     background-color: #9a9a9a;
@@ -34,7 +36,7 @@ const Container = styled.div`
 `
 
 const Img = styled.img`
-    margin-top: 18.188rem;
+    margin-top: 5rem;
     box-sizing: border-box;
 
     background: #FFFFFF;
@@ -119,7 +121,8 @@ function Pictureupload() {
     }
 
     return (
-        <div>
+        <BackgroundImage>
+            <Header />
             <RuleBox>
                 <p>규격 안내문</p>
             </RuleBox>
@@ -147,7 +150,7 @@ function Pictureupload() {
                 <Btn onClick={() => deleteFileImage()}>삭제</Btn>
             </BtnContainer>
         </Container>
-        </div>
+        </BackgroundImage>
     );
 }
 
