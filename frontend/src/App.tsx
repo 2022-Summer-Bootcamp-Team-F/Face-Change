@@ -1,24 +1,26 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Header from './components/Header';
-import Comment from './components/Comment';
-import PicturePageBtn from './components/PicturePageBtn';
-import ExamplePictures from './components/ExamplePictures';
-import Scroll from './components/Scroll';
-import Gallery from './components/Gallery';
+import Main from './pages/Main';
+import Pictureupload from './pages/Pictureupload';
+import Style from './pages/Style';
+import Results from './pages/Results';
+import Loading from './pages/Loading';
+import Error from './pages/Error';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Comment />
-      <PicturePageBtn />
-      <ExamplePictures />
-      <Scroll />
-      <Gallery />
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main/>}/>
+        <Route path="/pictureupload" element={<Pictureupload/>}/>
+        <Route path="/style" element={<Style/>}/>
+        <Route path="/results" element={<Results/>}/>
+        <Route path="/loading" element={<Loading/>}/>
+        <Route path="/error" element={<Error/>}/>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

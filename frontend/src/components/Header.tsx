@@ -1,13 +1,16 @@
-import React from 'react';
-import styles from './Header.module.css';
+import React from "react";
+import styled from "styled-components";
+
+const Logo = styled.section`
+  padding: 50px;
+  display: flex;
+`;
 
 export default function Header() {
-    return (
-        <div className={styles.Header}>
-            <div className="Logo">
-                <img className="logoImage" alt="logo" src="images/logo.png"/>
-                <img className="paletteImage" alt="palette" src="images/palette.png"/>
-            </div>
-        </div>
-    );
+  return (
+    <Logo>
+      <img className="logoImage" alt="logo" src="images/logo.png" />
+      <img className="paletteImage" alt="palette" src="images/palette.png" />
+    </Logo>
+  );
 }
