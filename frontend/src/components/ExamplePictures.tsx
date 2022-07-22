@@ -5,10 +5,10 @@ import './carousel2.css';
 import { Carousel } from 'react-responsive-carousel';
 
 const ChangeImage = styled.div`
-  width: 32rem;
-  height: 32rem;
+  width: 55rem;
+  height: 55rem;
   margin: 0 auto;
-  padding: 4.563rem 2.5rem 1.063rem 3.125rem;
+  padding: 2.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
   border-radius: 100px;
   text-align: center;
@@ -21,7 +21,7 @@ export default function ExamplePictures() {
     <div className="flex float-right mr-80">
       <Carousel
         showArrows
-        width="30rem"
+        width="70rem"
         showThumbs={false}
         infiniteLoop
         autoPlay
@@ -32,27 +32,23 @@ export default function ExamplePictures() {
         </ChangeImage>
         <ChangeImage>
           <p>caricature</p>
-          <img
-            className="Caricature"
-            alt="caricature"
-            src="images/girlAll.jpg"
-          />
-        </ChangeImage>
-        <ChangeImage>
-          <p>anime</p>
-          <img className="anime" alt="anime" src="images/girlAll2.jpg" />
-        </ChangeImage>
-        <ChangeImage>
-          <p>anime</p>
-          <img className="anime" alt="anime" src="images/girlAll3.jpg" />
-        </ChangeImage>
-        <ChangeImage>
-          <p>anime</p>
-          <img className="anime" alt="anime" src="images/sManAll.jpg" />
+          <img className="Caricature" alt="caricature" src="images/wman.jpg" />
         </ChangeImage>
         <ChangeImage>
           <p>anime</p>
           <img className="anime" alt="anime" src="images/bManAll.jpg" />
+        </ChangeImage>
+        <ChangeImage>
+          <p>anime</p>
+          <img className="anime" alt="anime" src="images/wgirl.jpg" />
+        </ChangeImage>
+        <ChangeImage>
+          <p>anime</p>
+          <img className="anime" alt="anime" src="images/rman.jpg" />
+        </ChangeImage>
+        <ChangeImage>
+          <p>anime</p>
+          <img className="anime" alt="anime" src="images/girlAll.jpg" />
         </ChangeImage>
       </Carousel>
     </div>
