@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import 'react-responsive-carousel/lib/styles/carousel.css';
-import './carousel2.css';
-import { Carousel } from 'react-responsive-carousel';
+import React from "react";
+import styled from "styled-components";
+import "react-responsive-carousel/lib/styles/carousel.css";
+import "./carousel2.css";
+import { Carousel } from "react-responsive-carousel";
 
 const ChangeImage = styled.div`
-  width: 55rem;
-  height: 55rem;
+  width: 40rem;
+  height: 40rem;
   margin: 0 auto;
   padding: 2.563rem 2.5rem 1.063rem 3.125rem;
   object-fit: contain;
@@ -18,10 +18,10 @@ const ChangeImage = styled.div`
 
 export default function ExamplePictures() {
   return (
-    <div className="flex float-right mr-80">
+    <div className="flex float-right">
       <Carousel
         showArrows
-        width="70rem"
+        width="50rem"
         showThumbs={false}
         infiniteLoop
         autoPlay
