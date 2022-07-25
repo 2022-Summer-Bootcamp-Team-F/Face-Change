@@ -2,15 +2,12 @@
 import React, { useState } from "react";
 import imageCompression from "browser-image-compression";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import Header from "../components/Header";
 import BackgroundImage from "../components/BackgroundImage";
 
 function Pictureupload() {
   const [fileImage, setFileImage] = useState("");
-
-  const saveFileImage = (e: any) => {
-    setFileImage(URL.createObjectURL(e.target.files[0]));
-  };
 
   const deleteFileImage = () => {
     URL.revokeObjectURL(fileImage);
@@ -18,7 +15,11 @@ function Pictureupload() {
   };
 
   const handleFileOnChange = async (e: any) => {
+    e.preventDefault();
     const file = e.target.files[0];
+    console.log(file);
+    const formData = new FormData();
+    formData.append("img", file);
 
     const options = {
       maxSizeMB: 2,
@@ -26,6 +27,9 @@ function Pictureupload() {
     };
 
     try {
+      const response = await axios.put("localhost:3000/Pictureupload");
+      console.log(response);
+
       const compressedFile = await imageCompression(file, options);
 
       const promise = imageCompression.getDataUrlFromFile(compressedFile);
@@ -49,20 +53,22 @@ function Pictureupload() {
         </div>
       </div>
       <div className="flex justify-center items-center mt-[3rem]">
-        <label
-          className="flex justify-center items-center h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..."
-          htmlFor="name"
-        >
-          사진 선택
-          <input
-            className="hidden"
-            id="name"
-            name="imgUpload"
-            type="file"
-            accept="image/*"
-            onChange={handleFileOnChange}
-          />
-        </label>
+        <form>
+          <label
+            className="flex justify-center items-center h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..."
+            htmlFor="name"
+          >
+            사진 선택
+            <input
+              className="hidden"
+              id="name"
+              name="imgUpload"
+              type="file"
+              accept="image/*"
+              onChange={handleFileOnChange}
+            />
+          </label>
+        </form>
         <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
           <Link
             to="/Style"
