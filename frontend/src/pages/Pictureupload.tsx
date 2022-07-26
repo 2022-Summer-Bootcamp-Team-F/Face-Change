@@ -1,157 +1,87 @@
 /* eslint-disable react/button-has-type */
-import React, {useState} from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
 import imageCompression from "browser-image-compression";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import axios from "axios";
 import Header from "../components/Header";
 import BackgroundImage from "../components/BackgroundImage";
 
-const Btn = styled.button`
-    background-color: #9a9a9a;
-    width: 16.875rem;
-    height: 4rem;
-    border-radius: 50px;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-
-    margin: 2.063rem 1.625rem 0 0.063rem;
-    padding: 1.063rem 5.375rem 1.063rem 5.313rem;
-    
-    font-family: Inter;
-    font-size: 1.3rem;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #fff;
-`;
-
-const Container = styled.div`
-    align-Items: center;
-    justify-Content: center;
-    display: flex;
-`
-
-const Img = styled.img`
-    margin-top: 5rem;
-    box-sizing: border-box;
-
-    background: #FFFFFF;
-    border: 5px dashed #D9D9D9;
-`
-
-const InputFile = styled.input`
-    display: none;
-`
-
-const Label = styled.label`
-    background-color: #9a9a9a;
-    width: 16.875rem;
-    height: 4rem;
-    border-radius: 50px;
-    cursor: pointer;
-
-    margin: 2.063rem 1.625rem 0 0.063rem;
-    padding: 1.063rem 5.375rem 1.063rem 5.313rem;
-    
-    font-family: Inter;
-    font-size: 1.3rem;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #fff;
-`
-
-const BtnContainer = styled.div`
-    position: absolute;
-    bottom: 8.25rem;
-    align-items: center;
-    justify-content: center;
-`
-
-const RuleBox = styled.div`
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 14.688rem;
-    height: 9.938rem;
-    margin: 17.625rem 0 16.125rem 5.75rem;
-    padding: 3.375rem 2.438rem 3.688rem 2.5rem;
-
-    background: #FFFFFF;
-    border: 5px dashed #C0BABA;
-`
-
 function Pictureupload() {
-    const [fileImage, setFileImage] = useState("");
+  const [fileImage, setFileImage] = useState("");
 
-    const saveFileImage = (e: any) => {
-        setFileImage(URL.createObjectURL(e.target.files[0]));
-    };
+  const deleteFileImage = () => {
+    URL.revokeObjectURL(fileImage);
+    setFileImage("");
+  };
 
-    const deleteFileImage = () => {
-        URL.revokeObjectURL(fileImage);
-        setFileImage("");
-    };
+  const handleSelect = (e: any) => {
+    const file = e.target.files[0];
+    const Image = URL.createObjectURL(file);
+    setFileImage(Image);
+  };
 
-    const handleFileOnChange = async (e: any) => {
-        const file = e.target.files[0];
+  const handleSubmit = async (e: any) => {
+    const file = e.target.files[0];
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("selectedFile", file);
 
-        const options = {
-            maxSizeMB: 2,
-            maxWidthOrHeight: 500,
-        }
+    await axios({
+      method: "post",
+      url: "https://e3958bf5-904e-4ab3-b838-add129ac1e9f.mock.pstmn.io",
+      data: formData,
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Accept: "application/json",
+      },
+    });
+  };
 
-        try {
-            const compressedFile = await imageCompression(file, options);
-
-            const promise = imageCompression.getDataUrlFromFile(compressedFile);
-            promise.then(result => {
-                setFileImage(result);
-            })
-        } catch(error) {
-            console.log(error);
-        }
-    }
-
-    return (
-        <BackgroundImage>
-            <Header />
-            <RuleBox>
-                <p>규격 안내문</p>
-            </RuleBox>
-        <Container>
-            {fileImage && (
-                <Img
-                alt = "sample"
-                src={fileImage} />
-            )}
-            <BtnContainer>
-                <Label htmlFor="name">
-                    사진 선택
-                <InputFile
-                id="name"
-                name="imgUpload"
-                type="file"
-                accept="image/*"
-                onChange={handleFileOnChange} />
-                </Label>
-                <Btn>
-                    <Link to = "/Style" style={{color: 'inherit', textDecoration: 'inherit'}}>
-                        사진 업로드
-                    </Link>
-                </Btn>
-                <Btn onClick={() => deleteFileImage()}>삭제</Btn>
-            </BtnContainer>
-        </Container>
-        </BackgroundImage>
-    );
+  return (
+    <BackgroundImage>
+      <Header />
+      <div className="flex justify-center items-center ml-[21rem]">
+        <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem] p-4 border-4">
+          {fileImage && <img alt="sample" id="sample" src={fileImage} />}
+        </div>
+        <div className="flex justify-center items-center border-dotted h-40 w-40 p-4 border-4 ml-[10rem]">
+          <p>규격 안내문</p>
+        </div>
+      </div>
+      <div className="flex justify-center items-center mt-[3rem]">
+        <form onSubmit={handleSubmit}>
+          <label
+            className="flex justify-center items-center h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..."
+            htmlFor="name"
+          >
+            사진 선택
+            <input
+              className="hidden"
+              id="name"
+              name="imgUpload"
+              type="file"
+              accept="image/*"
+              onChange={handleSelect}
+            />
+          </label>
+        </form>
+        <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
+          <Link
+            to="/Style"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            사진 업로드
+          </Link>
+        </button>
+        <button
+          className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..."
+          onClick={() => deleteFileImage()}
+        >
+          삭제
+        </button>
+      </div>
+    </BackgroundImage>
+  );
 }
 
 export default Pictureupload;
