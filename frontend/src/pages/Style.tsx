@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -64,14 +64,32 @@ const BtnContainer = styled.div`
   justify-content: center;
 `;
 
-const;
+const handleOnClick = async (index: number, item: any) => {
+  console.log(item.props.children.props.id);
+
+  //   await axios({
+  //     method: "post",
+  //     url: "http://127~~",
+  //     data: FormData,
+  //     headers: {
+  //       "Content-Type": "multipart/form-data",
+  //       Accept: "application/json"
+  //     }
+  //   })
+};
 
 export default function Style() {
   return (
     <BackgroundImage>
       <Header />
       <div className="flex items-center justify-center ">
-        <Carousel showArrows width="30rem" showThumbs={false} infiniteLoop>
+        <Carousel
+          showArrows
+          width="30rem"
+          showThumbs={false}
+          infiniteLoop
+          onChange={handleOnClick}
+        >
           <ChangeImage>
             <img
               className="Cartoon"
