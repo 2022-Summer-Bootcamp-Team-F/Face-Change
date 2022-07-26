@@ -64,12 +64,7 @@ const BtnContainer = styled.div`
   justify-content: center;
 `;
 
-// const img = async (e: any) => {
-//   e.preventDefault();
-//   const file = e.target.files[0];
-//   console.log(file);
-//   const formData = new FormData();
-//   formData.append("img", file);
+const;
 
 export default function Style() {
   return (
@@ -80,57 +75,57 @@ export default function Style() {
           <ChangeImage>
             <img
               className="Cartoon"
-              id="1"
+              id="10"
               alt="cartoon"
-              src="images/stylegallery_img/cartoons.png"
+              src="images/stylegallery_img/Cartoons_00003_01.png"
             />
           </ChangeImage>
           <ChangeImage>
             <img
               className="Caricature"
-              id="2"
+              id="0"
               alt="caricature"
-              src="images//stylegallery_img/caricatures.png"
+              src="images//stylegallery_img/Hillary_Clinton_C00034.png"
             />
           </ChangeImage>
           <ChangeImage>
             <img
               className="anime"
-              id="3"
+              id="17"
               alt="anime"
-              src="images//stylegallery_img/animes.png"
+              src="images//stylegallery_img/16031200.png"
             />
           </ChangeImage>
           <ChangeImage>
             <img
               className="Cartoon"
-              id="4"
+              id="53"
               alt="cartoon"
-              src="images/stylegallery_img/cartoons2.png"
+              src="images/stylegallery_img/Cartoons_00038_07.png"
             />
           </ChangeImage>
           <ChangeImage>
             <img
               className="Caricature"
-              id="5"
+              id="187"
               alt="caricature"
-              src="images//stylegallery_img/caricatures2.png"
+              src="images//stylegallery_img/Liv_Tyler_C00009.png"
             />
           </ChangeImage>
           <ChangeImage>
             <img
               className="anime"
-              id="6"
+              id="48"
               alt="anime"
-              src="images//stylegallery_img/animes2.png"
+              src="images//stylegallery_img/23075800.png"
             />
           </ChangeImage>
           <ChangeImage>
             <img
               className="Cartoon"
-              id="7"
+              id="26"
               alt="cartoon"
-              src="images/stylegallery_img/cartoons3.png"
+              src="images/stylegallery_img/Cartoons_00167_01.png"
             />
           </ChangeImage>
         </Carousel>
