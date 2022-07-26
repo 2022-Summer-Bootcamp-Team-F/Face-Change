@@ -81,7 +81,6 @@ export default function Style() {
             />
           </ChangeImage>
           <ChangeImage>
-            <p>caricature</p>
             <img
               className="Caricature"
               alt="caricature"
@@ -89,7 +88,6 @@ export default function Style() {
             />
           </ChangeImage>
           <ChangeImage>
-            <p>anime</p>
             <img
               className="anime"
               alt="anime"
@@ -97,7 +95,6 @@ export default function Style() {
             />
           </ChangeImage>
           <ChangeImage>
-            <p>cartoon</p>
             <img
               className="Cartoon"
               alt="cartoon"
@@ -105,7 +102,6 @@ export default function Style() {
             />
           </ChangeImage>
           <ChangeImage>
-            <p>caricature</p>
             <img
               className="Caricature"
               alt="caricature"
@@ -113,7 +109,6 @@ export default function Style() {
             />
           </ChangeImage>
           <ChangeImage>
-            <p>anime</p>
             <img
               className="anime"
               alt="anime"
@@ -121,7 +116,6 @@ export default function Style() {
             />
           </ChangeImage>
           <ChangeImage>
-            <p>cartoon</p>
             <img
               className="Cartoon"
               alt="cartoon"
