@@ -64,6 +64,13 @@ const BtnContainer = styled.div`
   justify-content: center;
 `;
 
+// const img = async (e: any) => {
+//   e.preventDefault();
+//   const file = e.target.files[0];
+//   console.log(file);
+//   const formData = new FormData();
+//   formData.append("img", file);
+
 export default function Style() {
   return (
     <BackgroundImage>
@@ -71,9 +78,9 @@ export default function Style() {
       <div className="flex items-center justify-center ">
         <Carousel showArrows width="30rem" showThumbs={false} infiniteLoop>
           <ChangeImage>
-            <p>cartoon</p>
             <img
               className="Cartoon"
+              id="1"
               alt="cartoon"
               src="images/stylegallery_img/cartoons.png"
             />
@@ -81,6 +88,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="Caricature"
+              id="2"
               alt="caricature"
               src="images//stylegallery_img/caricatures.png"
             />
@@ -88,6 +96,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="anime"
+              id="3"
               alt="anime"
               src="images//stylegallery_img/animes.png"
             />
@@ -95,6 +104,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="Cartoon"
+              id="4"
               alt="cartoon"
               src="images/stylegallery_img/cartoons2.png"
             />
@@ -102,6 +112,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="Caricature"
+              id="5"
               alt="caricature"
               src="images//stylegallery_img/caricatures2.png"
             />
@@ -109,6 +120,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="anime"
+              id="6"
               alt="anime"
               src="images//stylegallery_img/animes2.png"
             />
@@ -116,6 +128,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="Cartoon"
+              id="7"
               alt="cartoon"
               src="images/stylegallery_img/cartoons3.png"
             />
