@@ -17,27 +17,23 @@ function Pictureupload() {
   const handleFileOnChange = async (e: any) => {
     e.preventDefault();
     const file = e.target.files[0];
-    console.log(file);
     const formData = new FormData();
-    formData.append("img", file);
+    formData.append("files", file);
 
-    const options = {
-      maxSizeMB: 2,
-      maxWidthOrHeight: 500,
-    };
+    axios.post("http://localhost:8000/Pictureupload", formData, {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "multipart/form-data",
+      },
+    });
 
     try {
-      const response = await axios.put("localhost:3000/Pictureupload");
-      console.log(response);
-
-      const compressedFile = await imageCompression(file, options);
-
-      const promise = imageCompression.getDataUrlFromFile(compressedFile);
+      const promise = imageCompression.getDataUrlFromFile(file);
       promise.then((result) => {
         setFileImage(result);
       });
     } catch (error) {
-      console.log(error);
+      <Link to="/Error" />;
     }
   };
 
@@ -46,7 +42,7 @@ function Pictureupload() {
       <Header />
       <div className="flex justify-center items-center ml-[21rem]">
         <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem] p-4 border-4">
-          {fileImage && <img alt="sample" src={fileImage} />}
+          {fileImage && <img alt="sample" id="sample" src={fileImage} />}
         </div>
         <div className="flex justify-center items-center border-dotted h-40 w-40 p-4 border-4 ml-[10rem]">
           <p>규격 안내문</p>
