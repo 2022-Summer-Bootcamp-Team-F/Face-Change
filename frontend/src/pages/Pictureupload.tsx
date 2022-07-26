@@ -14,27 +14,27 @@ function Pictureupload() {
     setFileImage("");
   };
 
-  const handleFileOnChange = async (e: any) => {
-    e.preventDefault();
+  const handleSelect = (e: any) => {
     const file = e.target.files[0];
-    const formData = new FormData();
-    formData.append("files", file);
+    const Image = URL.createObjectURL(file);
+    setFileImage(Image);
+  };
 
-    axios.post("http://localhost:8000/Pictureupload", formData, {
+  const handleSubmit = async (e: any) => {
+    const file = e.target.files[0];
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("selectedFile", file);
+
+    await axios({
+      method: "post",
+      url: "https://e3958bf5-904e-4ab3-b838-add129ac1e9f.mock.pstmn.io",
+      data: formData,
       headers: {
-        "Access-Control-Allow-Origin": "*",
         "Content-Type": "multipart/form-data",
+        Accept: "application/json",
       },
     });
-
-    try {
-      const promise = imageCompression.getDataUrlFromFile(file);
-      promise.then((result) => {
-        setFileImage(result);
-      });
-    } catch (error) {
-      <Link to="/Error" />;
-    }
   };
 
   return (
@@ -49,7 +49,7 @@ function Pictureupload() {
         </div>
       </div>
       <div className="flex justify-center items-center mt-[3rem]">
-        <form>
+        <form onSubmit={handleSubmit}>
           <label
             className="flex justify-center items-center h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..."
             htmlFor="name"
@@ -61,7 +61,7 @@ function Pictureupload() {
               name="imgUpload"
               type="file"
               accept="image/*"
-              onChange={handleFileOnChange}
+              onChange={handleSelect}
             />
           </label>
         </form>
