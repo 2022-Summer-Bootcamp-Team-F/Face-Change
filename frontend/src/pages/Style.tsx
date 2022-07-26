@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-// import BackgroundImage from '../components/BackgroundImage';
-// import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
+import axios from 'axios';
 import 'react-responsive-carousel/lib/styles/carousel.css';
 import '../components/carousel copy.css';
 import { Carousel } from 'react-responsive-carousel';
