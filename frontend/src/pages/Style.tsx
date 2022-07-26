@@ -68,7 +68,6 @@ export default function Style() {
   return (
     <BackgroundImage>
       <Header />
-      {/* <AiFillCaretLeft className="left" color="black" size="20rem" /> */}
       <div className="flex items-center justify-center ">
         <Carousel showArrows width="30rem" showThumbs={false} infiniteLoop>
           <ChangeImage>
@@ -123,7 +122,6 @@ export default function Style() {
           </ChangeImage>
         </Carousel>
       </div>
-      {/* <AiFillCaretRight className="left" color="black" size="20rem" /> */}
       <BtnContainer>
         <Btn>
           <Link
