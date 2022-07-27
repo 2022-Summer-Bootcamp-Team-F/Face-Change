@@ -6,14 +6,7 @@ import 'react-responsive-carousel/lib/styles/carousel.css';
 import '../components/carousel copy.css';
 import { Carousel } from 'react-responsive-carousel';
 import Header from '../components/Header';
-
-const BackgroundImage = styled.div`
-  background-image: url('images/background.png');
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
+import BackgroundImage from '../components/BackgroundImage';
 
 const Sentence = styled.p`
   width: 12rem;
@@ -93,63 +86,73 @@ export default function Style() {
           infiniteLoop
           onChange={handleOnClick}
         >
-          <ChangeImage>
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
             <img
               className="Cartoon"
               id="1"
               alt="cartoon"
               src="images/stylegallery_img/Cartoons_00003_01.png"
             />
-          </ChangeImage>
-          <ChangeImage>
+          </div>
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
             <img
               className="Caricature"
               id="2"
               alt="caricature"
               src="images//stylegallery_img/Hillary_Clinton_C00034.png"
             />
-          </ChangeImage>
-          <ChangeImage>
+          </div>
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
             <img
               className="anime"
               id="3"
               alt="anime"
               src="images//stylegallery_img/16031200.png"
             />
-          </ChangeImage>
-          <ChangeImage>
+          </div>
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
             <img
               className="Cartoon"
               id="4"
               alt="cartoon"
               src="images/stylegallery_img/Cartoons_00038_07.png"
             />
-          </ChangeImage>
-          <ChangeImage>
+          </div>
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
             <img
               className="Caricature"
               id="5"
               alt="caricature"
               src="images//stylegallery_img/Liv_Tyler_C00009.png"
             />
-          </ChangeImage>
-          <ChangeImage>
+          </div>
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
             <img
               className="anime"
               id="6"
               alt="anime"
               src="images//stylegallery_img/23075800.png"
             />
-          </ChangeImage>
-          <ChangeImage>
+          </div>
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
             <img
               className="Cartoon"
               id="7"
               alt="cartoon"
               src="images/stylegallery_img/Cartoons_00167_01.png"
             />
-          </ChangeImage>
+          </div>
         </Carousel>
+        {/* <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
+        <Link
+          to="/Pictureupload"
+          style={{ color: 'inherit', textDecoration: 'inherit' }}
+        >
+          사진 선택으로 돌아가기
+        </button>
+        <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..." onClick={() => console.log('선택 완료')}>
+          화풍선택
+        </button> */}
       </div>
       <BtnContainer>
         <Btn>
@@ -160,7 +163,7 @@ export default function Style() {
             <Sentence>사진 선택으로 돌아가기</Sentence>
           </Link>
         </Btn>
-        <Btn>
+        <Btn onClick={() => console.log('선택 완료')}>
           <Sentence>화풍 선택</Sentence>
         </Btn>
       </BtnContainer>
