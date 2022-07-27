@@ -37,7 +37,7 @@ export default function Style() {
           infiniteLoop
           onChange={handleOnClick}
         >
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
             <img
               className="Cartoon"
               id="1"
@@ -45,7 +45,7 @@ export default function Style() {
               src="images/stylegallery_img/Cartoons_00003_01.png"
             />
           </div>
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
             <img
               className="Caricature"
               id="2"
@@ -53,7 +53,7 @@ export default function Style() {
               src="images//stylegallery_img/Hillary_Clinton_C00034.png"
             />
           </div>
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
             <img
               className="anime"
               id="3"
@@ -61,7 +61,7 @@ export default function Style() {
               src="images//stylegallery_img/16031200.png"
             />
           </div>
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
             <img
               className="Cartoon"
               id="4"
@@ -69,7 +69,7 @@ export default function Style() {
               src="images/stylegallery_img/Cartoons_00038_07.png"
             />
           </div>
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
             <img
               className="Caricature"
               id="5"
@@ -77,7 +77,7 @@ export default function Style() {
               src="images//stylegallery_img/Liv_Tyler_C00009.png"
             />
           </div>
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
             <img
               className="anime"
               id="6"
@@ -85,7 +85,7 @@ export default function Style() {
               src="images//stylegallery_img/23075800.png"
             />
           </div>
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[18.75rem]">
+          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
             <img
               className="Cartoon"
               id="7"
@@ -95,7 +95,7 @@ export default function Style() {
           </div>
         </Carousel>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mt-10">
         <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
           <Link
             to="/Pictureupload"
