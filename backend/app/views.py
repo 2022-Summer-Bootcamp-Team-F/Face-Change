@@ -1,4 +1,5 @@
-from app.serializers import UrlSerializer
+from yaml import serialize
+from .serializers import UrlSerializer
 from rest_framework.response import Response
 from app.models import Input_Image_URL
 from rest_framework.views import APIView
@@ -9,19 +10,27 @@ import boto3, uuid
 class input_im_url(APIView):
     def post(self, request):
         files = request.FILES.get('files')
+        print(files)
         s3r = boto3.resource('s3', 
-        aws_access_key_id= AWS_ACCESS_KEY_ID, 
-        aws_secret_access_key= AWS_SECRET_ACCESS_KEY)
+            aws_access_key_id= AWS_ACCESS_KEY_ID, 
+            aws_secret_access_key= AWS_SECRET_ACCESS_KEY
+        )        
 
         files._set_name(str(uuid.uuid4()))
         s3r.Bucket(AWS_STORAGE_BUCKET_NAME).put_object(
             Key='image/%s'%(files), 
             Body=files, 
-            ContentType='jpg')
-        Input_Image_URL.objects.create(
-            image_url = IMAGE_URL + 'image/' + "%s"%(files),
-            )
-        return Response({'message' : 'done'})
+            ContentType='jpg'
+        )
+        image_url = IMAGE_URL + 'image/' + "%s"%(files)        
+        # serialzier를 data에 dict 형태로 초기화
+        serialize = UrlSerializer(data={"image_url":image_url})
+        
+        # serializer로 제대로 된 데이터가 들어왔는 지 확인
+        if serialize.is_valid():
+            serialize.save()
+            return Response({'message' : 'success!'})
+        return Response({'message' : 'fail!'})
 
 # class im_detail(APIView):
 #     def get_object(self,pk):
