@@ -65,17 +65,20 @@ const BtnContainer = styled.div`
 `;
 
 const handleOnClick = async (index: number, item: any) => {
-  console.log(item.props.children.props);
+  console.log(item.props.children.props.id);
 
-  //   await axios({
-  //     method: "post",
-  //     url: "http://127~~",
-  //     data: FormData,
-  //     headers: {
-  //       "Content-Type": "multipart/form-data",
-  //       Accept: "application/json"
-  //     }
-  //   })
+  const formData = new FormData();
+  formData.append('selectedFile', item.props.children.props.id);
+
+  await axios({
+    method: 'post',
+    url: 'http://127~~',
+    data: formData,
+    headers: {
+      'Content-Type': 'multipart/form-data',
+      Accept: 'application/json',
+    },
+  });
 };
 
 export default function Style() {
@@ -93,7 +96,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="Cartoon"
-              id="10"
+              id="1"
               alt="cartoon"
               src="images/stylegallery_img/Cartoons_00003_01.png"
             />
@@ -101,7 +104,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="Caricature"
-              id="0"
+              id="2"
               alt="caricature"
               src="images//stylegallery_img/Hillary_Clinton_C00034.png"
             />
@@ -109,7 +112,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="anime"
-              id="17"
+              id="3"
               alt="anime"
               src="images//stylegallery_img/16031200.png"
             />
@@ -117,7 +120,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="Cartoon"
-              id="53"
+              id="4"
               alt="cartoon"
               src="images/stylegallery_img/Cartoons_00038_07.png"
             />
@@ -125,7 +128,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="Caricature"
-              id="187"
+              id="5"
               alt="caricature"
               src="images//stylegallery_img/Liv_Tyler_C00009.png"
             />
@@ -133,7 +136,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="anime"
-              id="48"
+              id="6"
               alt="anime"
               src="images//stylegallery_img/23075800.png"
             />
@@ -141,7 +144,7 @@ export default function Style() {
           <ChangeImage>
             <img
               className="Cartoon"
-              id="26"
+              id="7"
               alt="cartoon"
               src="images/stylegallery_img/Cartoons_00167_01.png"
             />
