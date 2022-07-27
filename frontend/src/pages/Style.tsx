@@ -65,7 +65,7 @@ const BtnContainer = styled.div`
 `;
 
 const handleOnClick = async (index: number, item: any) => {
-  console.log(item.props.children.props.id);
+  console.log(item.props.children.props);
 
   //   await axios({
   //     method: "post",
