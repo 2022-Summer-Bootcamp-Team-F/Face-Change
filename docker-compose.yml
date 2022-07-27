@@ -13,11 +13,11 @@ services:
     # docker container 특성상 커맨드 끝나면 컨테이너가 종료되는데 이를 방지하기 위해 tty 옵션 추가
     tty: true
 
-  # backend:
-  #   # Dockerfile의 경로
-  #   build: ./backend
-  #   command: python manage.py runserver 0:8000
-  #   ports:
-  #     - 8000:8000
-  #   volumes:
-  #     - ./backend:/backend
+  backend:
+    # Dockerfile의 경로
+    build: ./backend
+    command: python manage.py runserver 0:8000
+    ports:
+      - 8000:8000
+    volumes:
+      - ./backend:/backend
