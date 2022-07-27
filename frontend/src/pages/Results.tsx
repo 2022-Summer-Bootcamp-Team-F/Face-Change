@@ -40,9 +40,25 @@ export default function Results() {
       />
     </li>
   ));
+
   const resultImage = image.map(({ key, img }) => (
     <div>{image === key ? <img alt="" src={img} key={key} /> : null}</div>
   ));
+
+  const downloadImage = () => {
+    axios({
+      url: "http://127.0.0.1:8000/api/imgs/",
+      method: "GET",
+      responseType: "blob",
+    }).then((response) => {
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "image명";
+      link.click();
+    });
+  };
+
   return (
     <BackgroundImage>
       <Header />
@@ -71,7 +87,10 @@ export default function Results() {
             선택 이동
           </Link>
         </button>
-        <button className="h-10 w-40 rounded-2xl bg-purple-600 text-white ml-4 ...">
+        <button
+          className="h-10 w-40 rounded-2xl bg-purple-600 text-white ml-4 ..."
+          onClick={downloadImage}
+        >
           저장하기
         </button>
       </div>
