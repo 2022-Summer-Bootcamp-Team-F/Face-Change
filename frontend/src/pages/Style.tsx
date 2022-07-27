@@ -100,14 +100,20 @@ export default function Style() {
           <Link
             to="/Pictureupload"
             style={{ color: 'inherit', textDecoration: 'inherit' }}
-          />
-          사진 선택으로 돌아가기
+          >
+            사진 선택으로 돌아가기
+          </Link>
         </button>
         <button
           className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..."
           onClick={() => console.log('선택 완료')}
         >
-          화풍선택
+          <Link
+            to="/Results"
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
+          >
+            화풍선택
+          </Link>
         </button>
       </div>
     </BackgroundImage>
