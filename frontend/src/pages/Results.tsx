@@ -7,19 +7,17 @@ import axios from "axios";
 import Header from "../components/Header";
 import BackgroundImage from "../components/BackgroundImage";
 
-// const list = [
-//   { id: "1", key: "1", img: "images/palette.png" },
-//   { id: "2", key: "2", img: "images/caricature2.png" },
-//   { id: "3", key: "3", img: "images/logo.png" },
-//   { id: "4", key: "4", img: "images/slider.png" },
-//   { id: "5", key: "5", img: "images/anime2.png" },
-//   { id: "6", key: "6", img: "images/cartoon2.png" },
-//   { id: "7", key: "7", img: "images/background.png" },
-//   { id: "8", key: "8", img: "images/Spinner.png" },
-// ];
+const list = [
+  { id: "1", key: "1", img: "images/test/test1.png" },
+  { id: "2", key: "2", img: "images/test/test2.png" },
+  { id: "3", key: "3", img: "images/test/test3.png" },
+  { id: "4", key: "4", img: "images/test/test4.png" },
+  { id: "5", key: "5", img: "images/test/test5.png" },
+  { id: "6", key: "6", img: "images/test/test6.png" },
+];
 
 export default function Results() {
-  const [image, setImage] = useState([]);
+  const [image, setImage] = useState("");
   const serverURL = "http://127.0.0.1:8000/api/imgs/";
   const imageList = async () => {
     const response = await axios.get(serverURL);
@@ -29,7 +27,7 @@ export default function Results() {
     imageList();
   }, []);
 
-  const listImage = image.map(({ key, img }) => (
+  const listImage = list.map(({ key, img }) => (
     <li>
       <img
         alt=""
@@ -41,7 +39,7 @@ export default function Results() {
     </li>
   ));
 
-  const resultImage = image.map(({ key, img }) => (
+  const resultImage = list.map(({ key, img }) => (
     <div>{image === key ? <img alt="" src={img} key={key} /> : null}</div>
   ));
 
