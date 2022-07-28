@@ -8,12 +8,12 @@ import Header from "../components/Header";
 import BackgroundImage from "../components/BackgroundImage";
 
 const list = [
-  { id: "1", key: "1", img: "images/test/test1.png" },
-  { id: "2", key: "2", img: "images/test/test2.png" },
-  { id: "3", key: "3", img: "images/test/test3.png" },
-  { id: "4", key: "4", img: "images/test/test4.png" },
-  { id: "5", key: "5", img: "images/test/test5.png" },
-  { id: "6", key: "6", img: "images/test/test6.png" },
+  { id: "1", key: "1", img: "images/test/test1.jpg" },
+  { id: "2", key: "2", img: "images/test/test2.jpg" },
+  { id: "3", key: "3", img: "images/test/test3.jpg" },
+  { id: "4", key: "4", img: "images/test/test4.jpg" },
+  { id: "5", key: "5", img: "images/test/test5.jpg" },
+  { id: "6", key: "6", img: "images/test/test6.jpg" },
 ];
 
 export default function Results() {
@@ -28,7 +28,7 @@ export default function Results() {
   }, []);
 
   const listImage = list.map(({ key, img }) => (
-    <li>
+    <li className="mt-[1rem]">
       <img
         alt=""
         src={img}
