@@ -1,5 +1,5 @@
 /* eslint-disable react/button-has-type */
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import 'react-responsive-carousel/lib/styles/carousel.css';
@@ -9,18 +9,14 @@ import Header from '../components/Header';
 import BackgroundImage from '../components/BackgroundImage';
 
 function Style() {
-  const [nowImg, setNowImg] = useState('');
-
   const handleOnClick = (index: number, e: any) => {
     const list = e.props.children.props.id;
     console.log(list);
-    setNowImg(list);
   };
 
   const onSubmit = async (index: number, e: any) => {
     const list = e.props.children.props.id;
     console.log(list);
-    setNowImg(list);
 
     await axios({
       method: 'post',
