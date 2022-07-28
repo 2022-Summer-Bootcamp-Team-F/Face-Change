@@ -1,7 +1,6 @@
 /* eslint-disable react/style-prop-object */
 /* eslint-disable react/button-has-type */
 import React from 'react';
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 function Error() {
