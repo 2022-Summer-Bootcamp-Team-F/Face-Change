@@ -1,5 +1,5 @@
 /* eslint-disable react/button-has-type */
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import 'react-responsive-carousel/lib/styles/carousel.css';
@@ -8,24 +8,30 @@ import { Carousel } from 'react-responsive-carousel';
 import Header from '../components/Header';
 import BackgroundImage from '../components/BackgroundImage';
 
-const handleOnClick = async (index: number, item: any) => {
-  console.log(item.props.children.props.id);
+function Style() {
+  const [nowImg, setNowImg] = useState('');
 
-  const formData = new FormData();
-  formData.append('selectedFile', item.props.children.props.id);
+  const handleOnClick = (index: number, e: any) => {
+    const list = e.props.children.props.id;
+    console.log(list);
+    setNowImg(list);
+  };
 
-  await axios({
-    method: 'post',
-    url: 'http://127~~',
-    data: formData,
-    headers: {
-      'Content-Type': 'multipart/form-data',
-      Accept: 'application/json',
-    },
-  });
-};
+  const onSubmit = async (index: number, e: any) => {
+    const list = e.props.children.props.id;
+    console.log(list);
+    setNowImg(list);
 
-export default function Style() {
+    await axios({
+      method: 'post',
+      url: 'http://127.0.0.1:8000/api/style/',
+      data: { id: list },
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  };
+
   return (
     <BackgroundImage>
       <Header />
@@ -106,7 +112,7 @@ export default function Style() {
         </button>
         <button
           className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..."
-          onClick={() => console.log('선택 완료')}
+          onClick={() => onSubmit}
         >
           <Link
             to="/Results"
@@ -119,3 +125,4 @@ export default function Style() {
     </BackgroundImage>
   );
 }
+export default Style;
