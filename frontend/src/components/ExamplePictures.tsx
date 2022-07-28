@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import "react-responsive-carousel/lib/styles/carousel.css";
-import "./carousel2.css";
-import { Carousel } from "react-responsive-carousel";
+import React from 'react';
+import styled from 'styled-components';
+import 'react-responsive-carousel/lib/styles/carousel.css';
+import './carousel2.css';
+import { Carousel } from 'react-responsive-carousel';
 
 const ChangeImage = styled.div`
   width: 40rem;
@@ -27,27 +27,21 @@ export default function ExamplePictures() {
         autoPlay
       >
         <ChangeImage>
-          <p>cartoon</p>
           <img className="Cartoon" alt="cartoon" src="images/All.jpg" />
         </ChangeImage>
         <ChangeImage>
-          <p>caricature</p>
           <img className="Caricature" alt="caricature" src="images/wman.jpg" />
         </ChangeImage>
         <ChangeImage>
-          <p>anime</p>
           <img className="anime" alt="anime" src="images/bManAll.jpg" />
         </ChangeImage>
         <ChangeImage>
-          <p>anime</p>
           <img className="anime" alt="anime" src="images/wgirl.jpg" />
         </ChangeImage>
         <ChangeImage>
-          <p>anime</p>
           <img className="anime" alt="anime" src="images/rman.jpg" />
         </ChangeImage>
         <ChangeImage>
-          <p>anime</p>
           <img className="anime" alt="anime" src="images/girlAll.jpg" />
         </ChangeImage>
       </Carousel>
