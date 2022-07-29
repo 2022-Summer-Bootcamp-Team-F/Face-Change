@@ -37,7 +37,9 @@ export default function Loading() {
   return (
     <BackgroundImage>
       <Header />
-      <Img alt="spinner" src="images/Spinner.png" />
+      <div className="flex w-[15rem] h-[15rem] m-auto justify-center align-items mt-[5rem]">
+        <img alt="spinner" src="images/Spinner.png" />
+      </div>
       <LoadingMent>
         당신을 위한 만화를 그리고 있습니다. 잠시만 기다려 주세요...
       </LoadingMent>
