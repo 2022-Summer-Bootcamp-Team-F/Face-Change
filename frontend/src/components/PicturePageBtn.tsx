@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -26,26 +27,6 @@ const Btn = styled.button`
   letter-spacing: normal;
   text-align: left;
   color: #fff;
-`;
-
-const CircleContainer = styled.div`
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-
-  font-family: Inter;
-  font-size: 2rem;
-  font-weight: 350;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  fill: #4354f5;
 `;
 
 export default function PicturePageBtn() {
@@ -85,7 +66,7 @@ export default function PicturePageBtn() {
           to="/Pictureupload"
           style={{ color: "inherit", textDecoration: "inherit" }}
         >
-          <p className="Btntag">+</p>
+          <p>+</p>
         </Link>
       </Btn>
     </div>
