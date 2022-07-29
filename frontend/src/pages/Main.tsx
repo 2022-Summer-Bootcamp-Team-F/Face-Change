@@ -4,7 +4,6 @@ import Header from '../components/Header';
 import Comment from '../components/Comment';
 import PicturePageBtn from '../components/PicturePageBtn';
 import ExamplePictures from '../components/ExamplePictures';
-import Gallery from '../components/Gallery';
 
 export default function Main() {
   return (
@@ -16,7 +15,6 @@ export default function Main() {
       <Comment />
       <PicturePageBtn />
       <ExamplePictures />
-      <Gallery />
     </div>
   );
 }
