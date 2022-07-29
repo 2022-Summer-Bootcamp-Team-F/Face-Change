@@ -1,48 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
 import Header from '../components/Header';
 import BackgroundImage from '../components/BackgroundImage';
-
-const LoadingMent = styled.div`
-  width: 45.313rem;
-  height: 3.625rem;
-  margin: 0 auto;
-  font-family: Inter;
-  font-size: 3rem;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #000;
-
-  align-items: center;
-  justify-content: center;
-  margin-top: 10rem;
-  display: flex;
-`;
-
-const Img = styled.img`
-  width: 12rem;
-  height: 13rem;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-top: 5rem;
-`;
 
 export default function Loading() {
   return (
     <BackgroundImage>
       <Header />
-      <div className="flex w-[15rem] h-[15rem] m-auto justify-center align-items mt-[5rem]">
+      <div className="flex w-[16rem] h-[16rem] m-auto justify-center align-items mt-[5rem]">
         <img alt="spinner" src="images/Spinner.png" />
       </div>
-      <LoadingMent>
-        당신을 위한 만화를 그리고 있습니다. 잠시만 기다려 주세요...
-      </LoadingMent>
+      <div className="flex w-[55rem] h-[4rem] m-auto justify-center align-items mt-[5rem] font-bold text-6xl">
+        당신을 위한 만화를 그리고 있습니다.
+      </div>
+      <div className="flex w-[45rem] h-[4rem] m-auto justify-center align-items mt-[3rem] font-bold text-6xl">
+        잠시만 기다려 주세요...
+      </div>
     </BackgroundImage>
   );
 }
