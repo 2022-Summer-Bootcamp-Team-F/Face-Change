@@ -1,20 +1,24 @@
 import React from "react";
 
-import Header from '../components/Header';
-import Comment from '../components/Comment';
-import PicturePageBtn from '../components/PicturePageBtn';
-import ExamplePictures from '../components/ExamplePictures';
-import Gallery from '../components/Gallery';
-import BackgroundImage from '../components/BackgroundImage';
+import Header from "../components/Header";
+import Comment from "../components/Comment";
+import PicturePageBtn from "../components/PicturePageBtn";
+import ExamplePictures from "../components/ExamplePictures";
+import BackgroundImage from "../components/BackgroundImage";
 
 export default function Main() {
-    return(
+  return (
     <BackgroundImage>
-      <Header />
-      <Comment />
-      <PicturePageBtn />
-      <ExamplePictures />
-      <Gallery />
+      <div>
+        <Header />
+        <div className="flex">
+          <div className="ml-[5rem] mt-[10rem]">
+            <Comment />
+            <PicturePageBtn />
+          </div>
+          <ExamplePictures />
+        </div>
+      </div>
     </BackgroundImage>
-    );
+  );
 }
