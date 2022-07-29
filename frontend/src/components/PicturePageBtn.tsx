@@ -51,7 +51,7 @@ const CircleContainer = styled.div`
 export default function PicturePageBtn() {
   return (
     <div>
-      <CircleContainer>
+      <div className="absolute flex justify-center items-center m-auto w-[100vw] h-[100vh] fill-[#4354f5] text-[2rem] font-normal">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -79,7 +79,7 @@ export default function PicturePageBtn() {
             </textPath>
           </text>
         </svg>
-      </CircleContainer>
+      </div>
       <Btn>
         <Link
           to="/Pictureupload"
