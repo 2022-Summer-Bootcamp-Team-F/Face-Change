@@ -1,16 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-
-const Logo = styled.section`
-  padding: 50px;
-  display: flex;
-`;
+import React from 'react';
 
 export default function Header() {
   return (
-    <Logo>
+    <div className="flex p-[50px]">
       <img className="logoImage" alt="logo" src="images/logo.png" />
       <img className="paletteImage" alt="palette" src="images/palette.png" />
-    </Logo>
+    </div>
   );
 }
