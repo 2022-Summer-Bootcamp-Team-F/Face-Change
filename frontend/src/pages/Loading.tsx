@@ -1,11 +1,12 @@
 import React from 'react';
 import Header from '../components/Header';
-import BackgroundImage from '../components/BackgroundImage';
 
 export default function Loading() {
   return (
-    <div>
-      <BackgroundImage />
+    <div
+      className="absolute bg-center bg-cover w-full h-full"
+      style={{ backgroundImage: 'url(images/background.png)' }}
+    >
       <Header />
       <div className="flex w-[16rem] h-[16rem] m-auto justify-center align-items mt-[5rem]">
         <img alt="spinner" src="images/Spinner.png" />

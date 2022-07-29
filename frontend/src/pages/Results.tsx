@@ -4,7 +4,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import BackgroundImage from '../components/BackgroundImage';
 
 const list = [
   { id: '1', key: '1', img: 'images/palette.png' },
@@ -34,8 +33,10 @@ export default function Results() {
     <div>{image === key ? <img alt="" src={img} key={key} /> : null}</div>
   ));
   return (
-    <div>
-      <BackgroundImage />
+    <div
+      className="absolute bg-center bg-cover w-full h-full"
+      style={{ backgroundImage: 'url(images/background.png)' }}
+    >
       <Header />
       <div className="container flex justify-center items-center m-auto">
         <div className="overflow-auto h-80 w-12">

@@ -4,7 +4,6 @@ import imageCompression from 'browser-image-compression';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from '../components/Header';
-import BackgroundImage from '../components/BackgroundImage';
 
 function Pictureupload() {
   const [fileImage, setFileImage] = useState('');
@@ -42,8 +41,10 @@ function Pictureupload() {
   };
 
   return (
-    <div>
-      <BackgroundImage />
+    <div
+      className="absolute bg-center bg-cover w-full h-full"
+      style={{ backgroundImage: 'url(images/background.png)' }}
+    >
       <Header />
       <div className="flex justify-center items-center ml-[21rem]">
         <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem] p-4 border-4">

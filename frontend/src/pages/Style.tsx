@@ -6,7 +6,6 @@ import 'react-responsive-carousel/lib/styles/carousel.css';
 import '../components/carousel copy.css';
 import { Carousel } from 'react-responsive-carousel';
 import Header from '../components/Header';
-import BackgroundImage from '../components/BackgroundImage';
 
 function Style() {
   const [nowImg, setNowImg] = useState('');
@@ -33,8 +32,10 @@ function Style() {
   };
 
   return (
-    <div>
-      <BackgroundImage />
+    <div
+      className="absolute bg-center bg-cover w-full h-full"
+      style={{ backgroundImage: 'url(images/background.png)' }}
+    >
       <Header />
       <div className="flex items-center justify-center ">
         <Carousel
