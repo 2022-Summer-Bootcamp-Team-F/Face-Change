@@ -18,14 +18,28 @@ import BackgroundImage from "../components/BackgroundImage";
 
 export default function Results() {
   const [image, setImage] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const serverURL = "http://127.0.0.1:8000/api/imgs/";
   const imageList = async () => {
-    const response = await axios.get(serverURL);
-    setImage(response.data);
+    try {
+      setError("");
+      setImage([]);
+      setLoading(true);
+      const response = await axios.get(serverURL);
+      setImage(response.data);
+    } catch (e: any) {
+      setError(e);
+    }
+    setLoading(false);
   };
   useEffect(() => {
     imageList();
   }, []);
+
+  if (loading) return <Link to="/Loading" />;
+  if (error) return <Link to="/Error" />;
+  if (!image) return null;
 
   const listImage = image.map(({ key, img }) => (
     <li className="mt-[1rem]">
