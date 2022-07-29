@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import Header from '../components/Header';
 import Comment from '../components/Comment';
@@ -8,13 +8,14 @@ import Gallery from '../components/Gallery';
 import BackgroundImage from '../components/BackgroundImage';
 
 export default function Main() {
-    return(
-    <BackgroundImage>
+  return (
+    <div>
+      <BackgroundImage />
       <Header />
       <Comment />
       <PicturePageBtn />
       <ExamplePictures />
       <Gallery />
-    </BackgroundImage>
-    );
+    </div>
+  );
 }

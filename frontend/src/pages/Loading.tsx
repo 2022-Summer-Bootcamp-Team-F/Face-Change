@@ -4,7 +4,8 @@ import BackgroundImage from '../components/BackgroundImage';
 
 export default function Loading() {
   return (
-    <BackgroundImage>
+    <div>
+      <BackgroundImage />
       <Header />
       <div className="flex w-[16rem] h-[16rem] m-auto justify-center align-items mt-[5rem]">
         <img alt="spinner" src="images/Spinner.png" />
@@ -15,6 +16,6 @@ export default function Loading() {
       <div className="flex w-[45rem] h-[4rem] m-auto justify-center align-items mt-[3rem] font-bold text-6xl">
         잠시만 기다려 주세요...
       </div>
-    </BackgroundImage>
+    </div>
   );
 }

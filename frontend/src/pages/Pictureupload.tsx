@@ -1,17 +1,17 @@
 /* eslint-disable react/button-has-type */
-import React, { useState } from "react";
-import imageCompression from "browser-image-compression";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import Header from "../components/Header";
-import BackgroundImage from "../components/BackgroundImage";
+import React, { useState } from 'react';
+import imageCompression from 'browser-image-compression';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import Header from '../components/Header';
+import BackgroundImage from '../components/BackgroundImage';
 
 function Pictureupload() {
-  const [fileImage, setFileImage] = useState("");
+  const [fileImage, setFileImage] = useState('');
 
   const deleteFileImage = () => {
     URL.revokeObjectURL(fileImage);
-    setFileImage("");
+    setFileImage('');
   };
 
   const handleFileOnChange = async (e: any) => {
@@ -19,7 +19,7 @@ function Pictureupload() {
     const file = e.target.files[0];
     console.log(file);
     const formData = new FormData();
-    formData.append("img", file);
+    formData.append('img', file);
 
     const options = {
       maxSizeMB: 2,
@@ -27,7 +27,7 @@ function Pictureupload() {
     };
 
     try {
-      const response = await axios.put("localhost:3000/Pictureupload");
+      const response = await axios.put('localhost:3000/Pictureupload');
       console.log(response);
 
       const compressedFile = await imageCompression(file, options);
@@ -42,7 +42,8 @@ function Pictureupload() {
   };
 
   return (
-    <BackgroundImage>
+    <div>
+      <BackgroundImage />
       <Header />
       <div className="flex justify-center items-center ml-[21rem]">
         <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem] p-4 border-4">
@@ -72,7 +73,7 @@ function Pictureupload() {
         <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
           <Link
             to="/Style"
-            style={{ color: "inherit", textDecoration: "inherit" }}
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             사진 업로드
           </Link>
@@ -84,7 +85,7 @@ function Pictureupload() {
           삭제
         </button>
       </div>
-    </BackgroundImage>
+    </div>
   );
 }
 

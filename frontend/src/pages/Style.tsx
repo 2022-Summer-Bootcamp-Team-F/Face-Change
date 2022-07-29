@@ -33,7 +33,8 @@ function Style() {
   };
 
   return (
-    <BackgroundImage>
+    <div>
+      <BackgroundImage />
       <Header />
       <div className="flex items-center justify-center ">
         <Carousel
@@ -122,7 +123,7 @@ function Style() {
           </Link>
         </button>
       </div>
-    </BackgroundImage>
+    </div>
   );
 }
 export default Style;

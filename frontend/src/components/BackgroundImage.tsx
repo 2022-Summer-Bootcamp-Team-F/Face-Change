@@ -1,11 +1,14 @@
-import styled from "styled-components";
+/* eslint-disable react/self-closing-comp */
+import React from 'react';
 
-const BackgroundImage = styled.div`
-  background-image: url('images/background.png');
-  width:100vw;
-  height:100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-`
-
+function BackgroundImage() {
+  return (
+    <div className="BackgroundImage">
+      <div
+        className="absolute bg-center bg-cover w-full h-full"
+        style={{ backgroundImage: 'url(images/background.png)' }}
+      ></div>
+    </div>
+  );
+}
 export default BackgroundImage;
