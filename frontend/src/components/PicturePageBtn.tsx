@@ -32,11 +32,20 @@ const Btn = styled.button`
 export default function PicturePageBtn() {
   return (
     <div>
-      <div className="absolute flex justify-center items-center m-auto w-[100vw] h-[100vh] fill-[#4354f5] text-[2rem] font-normal">
+      <div className="absolute flex justify-center items-center w-[100vw] h-[100vh]">
+        <button className="absolute flex justify-center items-center h-[9.5rem] w-[9.5rem] rounded-[50%] bg-blue-500 text-white text-4xl mr-[61rem] mb-[40rem] ...">
+          <Link
+            to="/Pictureupload"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            +
+          </Link>
+        </button>
         <svg
+          className="fill-[#4354f5] text-[2rem] font-normal"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
-          viewBox="-205 -450 2200 2200"
+          viewBox="-227 -445 2200 2200"
         >
           <defs>
             <path
@@ -61,14 +70,6 @@ export default function PicturePageBtn() {
           </text>
         </svg>
       </div>
-      <Btn>
-        <Link
-          to="/Pictureupload"
-          style={{ color: "inherit", textDecoration: "inherit" }}
-        >
-          <p>+</p>
-        </Link>
-      </Btn>
     </div>
   );
 }
