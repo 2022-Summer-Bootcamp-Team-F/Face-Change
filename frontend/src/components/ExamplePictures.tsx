@@ -1,7 +1,7 @@
-import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.css";
-import "./carousel2.css";
-import { Carousel } from "react-responsive-carousel";
+import React from 'react';
+import 'react-responsive-carousel/lib/styles/carousel.css';
+import './carousel2.css';
+import { Carousel } from 'react-responsive-carousel';
 
 export default function ExamplePictures() {
   return (
