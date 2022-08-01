@@ -7,11 +7,11 @@ import Header from "../components/Header";
 import BackgroundImage from "../components/BackgroundImage";
 
 function Pictureupload() {
-  const [fileImage, setFileImage] = useState("");
+  const [fileImage, setFileImage] = useState('');
 
   const deleteFileImage = () => {
     URL.revokeObjectURL(fileImage);
-    setFileImage("");
+    setFileImage('');
   };
 
   const handleSelect = async (e: any) => {
@@ -35,7 +35,10 @@ function Pictureupload() {
   };
 
   return (
-    <BackgroundImage>
+    <div
+      className="absolute bg-center bg-cover w-full h-full"
+      style={{ backgroundImage: 'url(images/background.png)' }}
+    >
       <Header />
       <div className="flex justify-center items-center ml-[21rem]">
         <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem] p-4 border-4">
@@ -64,7 +67,7 @@ function Pictureupload() {
         <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
           <Link
             to="/Style"
-            style={{ color: "inherit", textDecoration: "inherit" }}
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             사진 업로드
           </Link>
@@ -76,7 +79,7 @@ function Pictureupload() {
           삭제
         </button>
       </div>
-    </BackgroundImage>
+    </div>
   );
 }
 
