@@ -116,7 +116,7 @@ function Style() {
             to="/Results"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            화풍 선택
+            결과 보기
           </Link>
         </button>
       </div>

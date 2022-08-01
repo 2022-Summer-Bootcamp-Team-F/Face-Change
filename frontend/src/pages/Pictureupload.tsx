@@ -58,7 +58,7 @@ function Pictureupload() {
           className="flex justify-center items-center h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ..."
           htmlFor="name"
         >
-          사진 선택
+          사진 업로드
           <input
             className="hidden"
             id="name"
@@ -74,7 +74,7 @@ function Pictureupload() {
             to="/Style"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            사진 업로드
+            화풍 선택
           </Link>
         </button>
         <button
