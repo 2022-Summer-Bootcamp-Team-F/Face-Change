@@ -9,13 +9,13 @@ function Error() {
       className="absolute bg-center bg-cover w-full h-full"
       style={{ backgroundImage: 'url(images/ErrorBackImg.png)' }}
     >
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center m-auto mt-40 w-[20rem] h-[20rem]">
         <img className="ErrorIcon" alt="erroricon" src="images/ErrorIcon.png" />
       </div>
-      <div className="flex justify-center items-center text-9xl mt-10">
+      <div className="flex justify-center items-center text-5xl mt-10 font-bold">
         <p>오류</p>
       </div>
-      <div className="flex justify-center items-center text-6xl mt-20">
+      <div className="flex justify-center items-center text-5xl mt-20 font-bold">
         <p>만화 그리기에 실패했습니다. 다른 사진으로 다시 시도해보세요.</p>
       </div>
       <div className="flex justify-center items-center mt-20">
