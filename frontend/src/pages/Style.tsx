@@ -6,7 +6,6 @@ import 'react-responsive-carousel/lib/styles/carousel.css';
 import '../components/carousel copy.css';
 import { Carousel } from 'react-responsive-carousel';
 import Header from '../components/Header';
-import BackgroundImage from '../components/BackgroundImage';
 
 function Style() {
   const handleOnClick = (index: number, e: any) => {
@@ -29,7 +28,10 @@ function Style() {
   };
 
   return (
-    <BackgroundImage>
+    <div
+      className="absolute bg-center bg-cover w-full h-full"
+      style={{ backgroundImage: 'url(images/background.png)' }}
+    >
       <Header />
       <div className="flex items-center justify-center ">
         <Carousel
@@ -118,7 +120,7 @@ function Style() {
           </Link>
         </button>
       </div>
-    </BackgroundImage>
+    </div>
   );
 }
 export default Style;

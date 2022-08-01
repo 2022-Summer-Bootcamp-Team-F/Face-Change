@@ -72,7 +72,10 @@ export default function Results() {
   };
 
   return (
-    <BackgroundImage>
+    <div
+      className="absolute bg-center bg-cover w-full h-full"
+      style={{ backgroundImage: 'url(images/background.png)' }}
+    >
       <Header />
       <div className="container flex justify-center items-center m-auto">
         <div className="overflow-auto h-80 w-12">
@@ -86,7 +89,7 @@ export default function Results() {
         <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ...">
           <Link
             to="/Pictureupload"
-            style={{ color: "inherit", textDecoration: "inherit" }}
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             업로드 이동
           </Link>
@@ -94,7 +97,7 @@ export default function Results() {
         <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
           <Link
             to="/Style"
-            style={{ color: "inherit", textDecoration: "inherit" }}
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             선택 이동
           </Link>
@@ -106,6 +109,6 @@ export default function Results() {
           저장하기
         </button>
       </div>
-    </BackgroundImage>
+    </div>
   );
 }
