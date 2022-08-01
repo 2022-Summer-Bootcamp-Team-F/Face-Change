@@ -7,6 +7,20 @@ import "../components/carousel copy.css";
 import { Carousel } from "react-responsive-carousel";
 import Header from "../components/Header";
 
+const slideList = [
+  { id: "1", key: "1", img: "images/stylegallery_img/Cartoons_00003_01.png" },
+  {
+    id: "2",
+    key: "2",
+    img: "images//stylegallery_img/Hillary_Clinton_C00034.png",
+  },
+  { id: "3", key: "3", img: "images//stylegallery_img/16031200.png" },
+  { id: "4", key: "4", img: "images/stylegallery_img/Cartoons_00038_07.png" },
+  { id: "5", key: "5", img: "images//stylegallery_img/Liv_Tyler_C00009.png" },
+  { id: "6", key: "6", img: "images//stylegallery_img/23075800.png" },
+  { id: "7", key: "7", img: "images/stylegallery_img/Cartoons_00167_01.png" },
+];
+
 function Style() {
   const handleOnClick = (index: number, e: any) => {
     const list = e.props.children.props.id;
@@ -27,6 +41,10 @@ function Style() {
     });
   };
 
+  const listImage = slideList.map(({ key, img }) => (
+    <img alt="" src={img} key={key} />
+  ));
+
   return (
     <div
       className="absolute bg-center bg-cover w-full h-full"
@@ -42,60 +60,25 @@ function Style() {
           onChange={handleOnClick}
         >
           <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
-            <img
-              className="Cartoon"
-              id="1"
-              alt="cartoon"
-              src="images/stylegallery_img/Cartoons_00003_01.png"
-            />
+            {listImage.shift()}
           </div>
           <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
-            <img
-              className="Caricature"
-              id="2"
-              alt="caricature"
-              src="images//stylegallery_img/Hillary_Clinton_C00034.png"
-            />
+            {listImage.shift()}
           </div>
           <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
-            <img
-              className="anime"
-              id="3"
-              alt="anime"
-              src="images//stylegallery_img/16031200.png"
-            />
+            {listImage.shift()}
           </div>
           <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
-            <img
-              className="Cartoon"
-              id="4"
-              alt="cartoon"
-              src="images/stylegallery_img/Cartoons_00038_07.png"
-            />
+            {listImage.shift()}
           </div>
           <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
-            <img
-              className="Caricature"
-              id="5"
-              alt="caricature"
-              src="images//stylegallery_img/Liv_Tyler_C00009.png"
-            />
+            {listImage.shift()}
           </div>
           <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
-            <img
-              className="anime"
-              id="6"
-              alt="anime"
-              src="images//stylegallery_img/23075800.png"
-            />
+            {listImage.shift()}
           </div>
           <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
-            <img
-              className="Cartoon"
-              id="7"
-              alt="cartoon"
-              src="images/stylegallery_img/Cartoons_00167_01.png"
-            />
+            {listImage.shift()}
           </div>
         </Carousel>
       </div>
