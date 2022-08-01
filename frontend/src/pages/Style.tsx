@@ -1,11 +1,11 @@
 /* eslint-disable react/button-has-type */
-import React from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import 'react-responsive-carousel/lib/styles/carousel.css';
-import '../components/carousel copy.css';
-import { Carousel } from 'react-responsive-carousel';
-import Header from '../components/Header';
+import React from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import "react-responsive-carousel/lib/styles/carousel.css";
+import "../components/carousel copy.css";
+import { Carousel } from "react-responsive-carousel";
+import Header from "../components/Header";
 
 function Style() {
   const handleOnClick = (index: number, e: any) => {
@@ -18,11 +18,11 @@ function Style() {
     console.log(list);
 
     await axios({
-      method: 'post',
-      url: 'http://127.0.0.1:8000/api/style/',
+      method: "post",
+      url: "http://127.0.0.1:8000/api/style/",
       data: { id: list },
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     });
   };
@@ -30,10 +30,10 @@ function Style() {
   return (
     <div
       className="absolute bg-center bg-cover w-full h-full"
-      style={{ backgroundImage: 'url(images/background.png)' }}
+      style={{ backgroundImage: "url(images/background.png)" }}
     >
       <Header />
-      <div className="flex items-center justify-center ">
+      <div className="flex items-center justify-center">
         <Carousel
           showArrows
           width="30rem"
@@ -103,7 +103,7 @@ function Style() {
         <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
           <Link
             to="/Pictureupload"
-            style={{ color: 'inherit', textDecoration: 'inherit' }}
+            style={{ color: "inherit", textDecoration: "inherit" }}
           >
             사진 선택으로 돌아가기
           </Link>
@@ -114,7 +114,7 @@ function Style() {
         >
           <Link
             to="/Results"
-            style={{ color: 'inherit', textDecoration: 'inherit' }}
+            style={{ color: "inherit", textDecoration: "inherit" }}
           >
             화풍선택
           </Link>
