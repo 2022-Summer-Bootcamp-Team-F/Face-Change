@@ -39,12 +39,18 @@ function Pictureupload() {
       style={{ backgroundImage: "url(images/background.png)" }}
     >
       <Header />
-      <div className="flex justify-center items-center ml-[21rem]">
+      <div className="flex justify-center items-center ml-[26.5rem]">
         <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem] p-4 border-4">
           {fileImage && <img alt="sample" id="sample" src={fileImage} />}
         </div>
-        <div className="flex justify-center items-center border-dotted h-40 w-40 p-4 border-4 ml-[10rem]">
-          <p>규격 안내문</p>
+        <div className="flex justify-center items-center border-dotted h-[20rem] w-[15rem] p-4 border-4 ml-[10rem]">
+          <p>
+            <p className="text-center">주의 사항</p>
+            <br />
+            1. 이목구비가 잘 나오도록 정면 사진만 넣어주세요.
+            <br />
+            2. 단체 사진, 동물 사진 등은 적용인 안됩니다.
+          </p>
         </div>
       </div>
       <div className="flex justify-center items-center mt-[3rem]">
