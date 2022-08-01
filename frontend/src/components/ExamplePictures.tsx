@@ -13,22 +13,22 @@ export default function ExamplePictures() {
         infiniteLoop
         autoPlay
       >
-        <div className="flex justify-center items-center m-auto rounded-[100px] h-[40rem] w-[40rem]">
+        <div className="flex justify-center items-center m-auto rounded-[100px] h-[35rem] w-[35rem]">
           <img className="Cartoon" alt="cartoon" src="images/All.jpg" />
         </div>
-        <div className="flex justify-center items-center m-auto rounded-[100px] h-[40rem] w-[40rem]">
+        <div className="flex justify-center items-center m-auto rounded-[100px] h-[35rem] w-[35rem]">
           <img className="Caricature" alt="caricature" src="images/wman.jpg" />
         </div>
-        <div className="flex justify-center items-center m-auto rounded-[100px] h-[40rem] w-[40rem]">
+        <div className="flex justify-center items-center m-auto rounded-[100px] h-[35rem] w-[35rem]">
           <img className="anime" alt="anime" src="images/bManAll.jpg" />
         </div>
-        <div className="flex justify-center items-center m-auto rounded-[100px] h-[40rem] w-[40rem]">
+        <div className="flex justify-center items-center m-auto rounded-[100px] h-[35rem] w-[35rem]">
           <img className="anime" alt="anime" src="images/wgirl.jpg" />
         </div>
-        <div className="flex justify-center items-center m-auto rounded-[100px] h-[40rem] w-[40rem]">
+        <div className="flex justify-center items-center m-auto rounded-[100px] h-[35rem] w-[35rem]">
           <img className="anime" alt="anime" src="images/rman.jpg" />
         </div>
-        <div className="flex justify-center items-center m-auto rounded-[100px] h-[40rem] w-[40rem]">
+        <div className="flex justify-center items-center m-auto rounded-[100px] h-[35rem] w-[35rem]">
           <img className="anime" alt="anime" src="images/girlAll.jpg" />
         </div>
       </Carousel>
