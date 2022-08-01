@@ -59,25 +59,25 @@ function Style() {
           infiniteLoop
           onChange={handleOnClick}
         >
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
+          <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
             {listImage.shift()}
           </div>
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
+          <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
             {listImage.shift()}
           </div>
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
+          <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
             {listImage.shift()}
           </div>
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
+          <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
             {listImage.shift()}
           </div>
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
+          <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
             {listImage.shift()}
           </div>
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
+          <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
             {listImage.shift()}
           </div>
-          <div className="flex justify-center items-center border-dotted h-[38rem] w-[30rem]">
+          <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
             {listImage.shift()}
           </div>
         </Carousel>
