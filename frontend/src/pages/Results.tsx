@@ -76,7 +76,7 @@ export default function Results() {
       style={{ backgroundImage: "url(images/background.png)" }}
     >
       <Header />
-      <div className="container flex justify-center items-center m-auto ml-[3.5rem]">
+      <div className="container flex justify-center items-center m-auto ml-[2rem]">
         <div className="overflow-auto h-[30rem] w-[5rem]">
           <ul>{listImage}</ul>
         </div>
