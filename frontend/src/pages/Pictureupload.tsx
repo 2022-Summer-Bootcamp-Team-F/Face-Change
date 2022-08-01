@@ -1,6 +1,6 @@
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable react/button-has-type */
 import React, { useState } from "react";
-import imageCompression from "browser-image-compression";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
@@ -14,21 +14,18 @@ function Pictureupload() {
     setFileImage("");
   };
 
-  const handleSelect = (e: any) => {
+  const handleSelect = async (e: any) => {
     const file = e.target.files[0];
     const Image = URL.createObjectURL(file);
     setFileImage(Image);
-  };
 
-  const handleSubmit = async (e: any) => {
-    const file = e.target.files[0];
     e.preventDefault();
     const formData = new FormData();
-    formData.append("selectedFile", file);
+    formData.append("files", file);
 
     await axios({
       method: "post",
-      url: "https://e3958bf5-904e-4ab3-b838-add129ac1e9f.mock.pstmn.io",
+      url: "http://127.0.0.1:8000/api/imgs/",
       data: formData,
       headers: {
         "Content-Type": "multipart/form-data",
@@ -49,22 +46,21 @@ function Pictureupload() {
         </div>
       </div>
       <div className="flex justify-center items-center mt-[3rem]">
-        <form onSubmit={handleSubmit}>
-          <label
-            className="flex justify-center items-center h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..."
-            htmlFor="name"
-          >
-            사진 선택
-            <input
-              className="hidden"
-              id="name"
-              name="imgUpload"
-              type="file"
-              accept="image/*"
-              onChange={handleSelect}
-            />
-          </label>
-        </form>
+        <label
+          className="flex justify-center items-center h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..."
+          htmlFor="name"
+        >
+          사진 선택
+          <input
+            className="hidden"
+            id="name"
+            name="imgUpload"
+            type="file"
+            accept="image/*"
+            onChange={handleSelect}
+          />
+        </label>
+
         <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
           <Link
             to="/Style"
