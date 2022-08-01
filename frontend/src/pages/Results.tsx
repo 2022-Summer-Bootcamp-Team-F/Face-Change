@@ -85,7 +85,7 @@ export default function Results() {
         </div>
       </div>
       <div className="Container flex justify-center items-center mt-20">
-        <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ...">
+        <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ...">
           <Link
             to="/Pictureupload"
             style={{ color: "inherit", textDecoration: "inherit" }}
@@ -93,7 +93,7 @@ export default function Results() {
             업로드 이동
           </Link>
         </button>
-        <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
+        <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
           <Link
             to="/Style"
             style={{ color: "inherit", textDecoration: "inherit" }}

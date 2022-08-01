@@ -49,13 +49,13 @@ function Pictureupload() {
             <br />
             1. 이목구비가 잘 나오도록 정면 사진만 넣어주세요.
             <br />
-            2. 단체 사진, 동물 사진 등은 적용이 안됩니다.
+            2. 단체 사진, 동물 사진 등은 적용 안됩니다.
           </p>
         </div>
       </div>
       <div className="flex justify-center items-center mt-[3rem]">
         <label
-          className="flex justify-center items-center h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..."
+          className="flex justify-center items-center h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ..."
           htmlFor="name"
         >
           사진 선택
@@ -69,7 +69,7 @@ function Pictureupload() {
           />
         </label>
 
-        <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
+        <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
           <Link
             to="/Style"
             style={{ color: "inherit", textDecoration: "inherit" }}
@@ -78,7 +78,7 @@ function Pictureupload() {
           </Link>
         </button>
         <button
-          className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..."
+          className="h-10 w-40 rounded-2xl bg-red-500 text-white ml-4 ..."
           onClick={() => deleteFileImage()}
         >
           삭제

@@ -100,23 +100,23 @@ function Style() {
         </Carousel>
       </div>
       <div className="flex justify-center items-center mt-10">
-        <button className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ...">
+        <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
           <Link
             to="/Pictureupload"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            사진 선택으로 돌아가기
+            사진 재선택
           </Link>
         </button>
         <button
-          className="h-10 w-40 rounded-2xl bg-gray-400 text-white ml-4 ..."
+          className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ..."
           onClick={() => onSubmit}
         >
           <Link
             to="/Results"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
-            화풍선택
+            화풍 선택
           </Link>
         </button>
       </div>
