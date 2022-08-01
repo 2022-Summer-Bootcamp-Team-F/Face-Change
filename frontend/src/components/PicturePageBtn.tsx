@@ -1,61 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-
-const Btn = styled.button`
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 1px solid black;
-  background-color: #4354f5;
-
-  top: 3.3rem;
-  margin: 0 auto;
-  padding-top: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  font-family: Inter;
-  font-size: 8rem;
-  font-weight: 100;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #fff;
-`;
-
-const CircleContainer = styled.div`
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-
-  font-family: Inter;
-  font-size: 2rem;
-  font-weight: 350;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  fill: #4354f5;
-`;
+/* eslint-disable react/button-has-type */
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function PicturePageBtn() {
   return (
     <div>
-      <CircleContainer>
+      <div className="absolute flex justify-center items-center w-[100vw] h-[100vh]">
         <svg
+          className="absolute fill-[#4354f5] text-[2rem] font-normal w-[15rem] h-[15rem] mr-[61rem] mb-[40rem]"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
-          viewBox="-205 -450 2200 2200"
+          viewBox="100 100 300 300"
         >
           <defs>
             <path
@@ -75,19 +30,19 @@ export default function PicturePageBtn() {
           </defs>
           <text dy="90" textLength="1220">
             <textPath xlinkHref="#textcircle_top">
-              사진 선택 + 사진 선택 + 사진 선택 + 사진 선택 +{" "}
+              사진 선택 + 사진 선택 + 사진 선택 + 사진 선택 +{' '}
             </textPath>
           </text>
         </svg>
-      </CircleContainer>
-      <Btn>
-        <Link
-          to="/Pictureupload"
-          style={{ color: "inherit", textDecoration: "inherit" }}
-        >
-          <p className="Btntag">+</p>
-        </Link>
-      </Btn>
+        <button className="absolute flex justify-center items-center h-[9.5rem] w-[9.5rem] rounded-[50%] bg-blue-500 text-white text-4xl mr-[61rem] mb-[40rem] ...">
+          <Link
+            to="/Pictureupload"
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
+          >
+            +
+          </Link>
+        </button>
+      </div>
     </div>
   );
 }
