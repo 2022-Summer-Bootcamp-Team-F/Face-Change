@@ -1,11 +1,11 @@
-import React from 'react';
-import 'react-responsive-carousel/lib/styles/carousel.css';
-import './carousel2.css';
-import { Carousel } from 'react-responsive-carousel';
+import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.css";
+import "./carousel2.css";
+import { Carousel } from "react-responsive-carousel";
 
 export default function ExamplePictures() {
   return (
-    <div className="flex float-right">
+    <div className="flex float-right mr-[10rem]">
       <Carousel
         showArrows
         width="50rem"
