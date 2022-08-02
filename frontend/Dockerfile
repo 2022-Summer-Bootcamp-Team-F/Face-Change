@@ -15,5 +15,5 @@ RUN npm cache clean --force
 # yarn 설치
 RUN npm isntall yarn
 
-# 이미지가 빌드 될때 실행
+# 이미지가 빌드 될때 실행, 배포 환경에는 RUN yarn run build 사용
 RUN yarn install
