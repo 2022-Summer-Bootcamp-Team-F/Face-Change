@@ -3,7 +3,23 @@ import 'react-responsive-carousel/lib/styles/carousel.css';
 import './carousel2.css';
 import { Carousel } from 'react-responsive-carousel';
 
+const exampleList = [
+  { id: "1", key: "1", img: "images/All.jpg" },
+  {
+    id: "2",
+    key: "2",
+    img: "images/wman.jpg",
+  },
+  { id: "3", key: "3", img: "images/bManAll.jpg" },
+  { id: "4", key: "4", img: "images/wgirl.jpg" },
+  { id: "5", key: "5", img: "images/rman.jpg" },
+  { id: "6", key: "6", img: "images/girlAll.jpg" },
+];
+
 export default function ExamplePictures() {
+  const exampleImage = exampleList.map(({ key, img }) => (
+    <img alt="" src={img} key={key} />
+  ));
   return (
     <div className="flex float-right mr-[10rem]">
       <Carousel
@@ -14,22 +30,22 @@ export default function ExamplePictures() {
         autoPlay
       >
         <div className="flex justify-center items-center m-auto rounded-[100px] h-[35rem] w-[35rem]">
-          <img className="Cartoon" alt="cartoon" src="images/All.jpg" />
+          {exampleImage.shift()}
         </div>
         <div className="flex justify-center items-center m-auto rounded-[100px] h-[35rem] w-[35rem]">
-          <img className="Caricature" alt="caricature" src="images/wman.jpg" />
+          {exampleImage.shift()}
         </div>
         <div className="flex justify-center items-center m-auto rounded-[100px] h-[35rem] w-[35rem]">
-          <img className="anime" alt="anime" src="images/bManAll.jpg" />
+          {exampleImage.shift()}
         </div>
         <div className="flex justify-center items-center m-auto rounded-[100px] h-[35rem] w-[35rem]">
-          <img className="anime" alt="anime" src="images/wgirl.jpg" />
+          {exampleImage.shift()}
         </div>
         <div className="flex justify-center items-center m-auto rounded-[100px] h-[35rem] w-[35rem]">
-          <img className="anime" alt="anime" src="images/rman.jpg" />
+          {exampleImage.shift()}
         </div>
         <div className="flex justify-center items-center m-auto rounded-[100px] h-[35rem] w-[35rem]">
-          <img className="anime" alt="anime" src="images/girlAll.jpg" />
+          {exampleImage.shift()}
         </div>
       </Carousel>
     </div>

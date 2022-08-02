@@ -5,13 +5,13 @@
 .carousel .control-next.control-arrow,
 .carousel .control-next.control-arrow:hover {
   background-color: transparent;
-  right: -146px;
+  right: -9rem;
 }
 
 .carousel .control-prev.control-arrow,
 .carousel .control-prev.control-arrow:hover {
   background-color: transparent;
-  left: -146px;
+  left: -9rem;
 }
 
 .carousel .control-arrow,
@@ -22,9 +22,9 @@
 .carousel .control-next.control-arrow:before {
   content: "";
   border: solid #000000;
-  border-width: 0 8px 8px 0;
+  border-width: 0 0.5rem 0.5rem 0;
   display: inline-block;
-  padding: 14px;
+  padding: 1rem;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
@@ -32,9 +32,9 @@
 .carousel .control-prev.control-arrow:before {
   content: "";
   border: solid #000000;
-  border-width: 0 8px 8px 0;
+  border-width: 0 0.5rem 0.5rem 0;
   display: inline-block;
-  padding: 14px;
+  padding: 1rem;
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
