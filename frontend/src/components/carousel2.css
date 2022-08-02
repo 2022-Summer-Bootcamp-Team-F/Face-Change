@@ -5,13 +5,13 @@
 .carousel .control-next.control-arrow,
 .carousel .control-next.control-arrow:hover {
   background-color: transparent;
-  right: -146px;
+  right: -1rem;
 }
 
 .carousel .control-prev.control-arrow,
 .carousel .control-prev.control-arrow:hover {
   background-color: transparent;
-  left: -146px;
+  left: -1rem;
 }
 
 .carousel .control-arrow,
@@ -19,8 +19,16 @@
   opacity: 1;
 }
 
+.carousel .control-next.control-arrow:before {
+  border: solid rgba(0, 0, 0, 0);
+}
+
+.carousel .control-prev.control-arrow:before {
+  border: solid rgba(0, 0, 0, 0);
+}
+
 .carousel {
   width: 30rem;
-  height: 41rem;
+  height: 35rem;
   margin: 0 auto;
 }
