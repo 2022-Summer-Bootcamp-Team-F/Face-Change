@@ -37,7 +37,7 @@ def get_secret(setting, secrets=secrets):
 
 SECRET_KEY = get_secret("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -145,7 +145,7 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 AWS_ACCESS_KEY_ID = my_settings.AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY = my_settings.AWS_SECRET_ACCESS_KEY
-AWS_STORAGE_BUCKET_NAME = 'teamffacechange'
+AWS_STORAGE_BUCKET_NAME = 'face-change'
 AWS_REGION = 'ap-northeast-2'
 IMAGE_URL = "https://%s.s3.%s.amazonaws.com/" % (AWS_STORAGE_BUCKET_NAME, AWS_REGION)
 AWS_QUERYSTRING_AUTH = False
