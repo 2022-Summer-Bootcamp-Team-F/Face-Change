@@ -1,16 +1,16 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable react/button-has-type */
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import Header from "../components/Header";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import Header from '../components/Header';
 
 function Pictureupload() {
-  const [fileImage, setFileImage] = useState("");
+  const [fileImage, setFileImage] = useState('');
 
   const deleteFileImage = () => {
     URL.revokeObjectURL(fileImage);
-    setFileImage("");
+    setFileImage('');
   };
 
   const handleSelect = async (e: any) => {
@@ -20,15 +20,15 @@ function Pictureupload() {
 
     e.preventDefault();
     const formData = new FormData();
-    formData.append("files", file);
+    formData.append('files', file);
 
     await axios({
-      method: "post",
-      url: "http://127.0.0.1:8000/api/imgs/",
+      method: 'post',
+      url: 'http://127.0.0.1:8000/api/images/',
       data: formData,
       headers: {
-        "Content-Type": "multipart/form-data",
-        Accept: "application/json",
+        'Content-Type': 'multipart/form-data',
+        Accept: 'application/json',
       },
     });
   };
@@ -36,7 +36,7 @@ function Pictureupload() {
   return (
     <div
       className="absolute bg-center bg-cover w-full h-full"
-      style={{ backgroundImage: "url(images/background.png)" }}
+      style={{ backgroundImage: 'url(images/background.png)' }}
     >
       <Header />
       <div className="flex justify-center items-center ml-[26.5rem]">
@@ -72,7 +72,7 @@ function Pictureupload() {
         <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
           <Link
             to="/Style"
-            style={{ color: "inherit", textDecoration: "inherit" }}
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             화풍 선택
           </Link>
