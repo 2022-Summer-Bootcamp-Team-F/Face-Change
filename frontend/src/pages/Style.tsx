@@ -1,17 +1,17 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/button-has-type */
-import React, { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import axios from "axios";
-import "react-responsive-carousel/lib/styles/carousel.css";
-import "../components/carousel copy.css";
-import { Carousel } from "react-responsive-carousel";
-import Header from "../components/Header";
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import axios from 'axios';
+import 'react-responsive-carousel/lib/styles/carousel.css';
+import '../components/carousel copy.css';
+import { Carousel } from 'react-responsive-carousel';
+import Header from '../components/Header';
 
 function Style() {
   const { state } = useLocation();
-  const handleOnClick = (index: number, e: any) => {
-    const list = e.props.children.props.id;
+  const handleOnClick = (e: any) => {
+    const list = e;
     console.log(list);
   };
 
@@ -19,19 +19,26 @@ function Style() {
     if (state) console.log(state);
   }, []);
 
-  const onSubmit = async (index: number, e: any, state: any) => {
-    const list = e.props.children.props.id;
+  const onSubmit = (e: any) => {
     e.preventDefault();
+    onSubmit2(e);
+  };
+
+  const onSubmit2 = async (e: any) => {
+    const { fileImage } = state as any;
+    const list = e;
     const formData = new FormData();
-    formData.append("files", state, list);
+    formData.append('files', fileImage);
+    formData.append('style_enum', '2');
+    console.log(formData);
 
     await axios({
-      method: "post",
-      url: "http://127.0.0.1:8000/api/images/",
+      method: 'post',
+      url: 'http://localhost:8000/api/images/',
       data: formData,
       headers: {
-        "Content-Type": "multipart/form-data",
-        Accept: "application/json",
+        'Content-Type': 'multipart/form-data',
+        Accept: 'application/json',
       },
     })
       .then((response) => {
@@ -45,7 +52,7 @@ function Style() {
   return (
     <div
       className="absolute bg-center bg-cover w-full h-full"
-      style={{ backgroundImage: "url(images/background.png)" }}
+      style={{ backgroundImage: 'url(images/background.png)' }}
     >
       <Header />
       <div className="flex items-center justify-center">
@@ -118,18 +125,18 @@ function Style() {
         <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
           <Link
             to="/Pictureupload"
-            style={{ color: "inherit", textDecoration: "inherit" }}
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             사진 재선택
           </Link>
         </button>
         <button
           className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ..."
-          onChange={() => onSubmit}
+          onClick={onSubmit}
         >
           <Link
             to="/Results"
-            style={{ color: "inherit", textDecoration: "inherit" }}
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             결과 보기
           </Link>
