@@ -19,13 +19,11 @@ function Style() {
     if (state) console.log(state);
   }, []);
 
-  const onSubmit = async (index: number, e: any) => {
-    const file = e.target.files[0];
+  const onSubmit = async (index: number, e: any, state: any) => {
     const list = e.props.children.props.id;
+    e.preventDefault();
     const formData = new FormData();
-    formData.append("files", file, list);
-
-    console.log(list);
+    formData.append("files", state, list);
 
     await axios({
       method: "post",
