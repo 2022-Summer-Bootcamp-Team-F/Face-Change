@@ -11,7 +11,7 @@ import Header from "../components/Header";
 function Style() {
   const { state } = useLocation();
   const handleOnClick = (index: number, e: any) => {
-    const list = e.props.children.key;
+    const list = e.props.children.props.id;
     console.log(list);
   };
 
@@ -23,21 +23,25 @@ function Style() {
     const file = e.target.files[0];
     const list = e.props.children.props.id;
     const formData = new FormData();
-    formData.append("files", file);
-    const formData2 = new FormData();
-    formData2.append("id", list);
+    formData.append("files", file, list);
 
     console.log(list);
 
     await axios({
       method: "post",
-      url: "http://127.0.0.1:8000/api/style/",
-      data: { formData, formData2 },
+      url: "http://127.0.0.1:8000/api/images/",
+      data: formData,
       headers: {
         "Content-Type": "multipart/form-data",
         Accept: "application/json",
       },
-    });
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -123,7 +127,7 @@ function Style() {
         </button>
         <button
           className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ..."
-          onClick={() => onSubmit}
+          onChange={() => onSubmit}
         >
           <Link
             to="/Results"
