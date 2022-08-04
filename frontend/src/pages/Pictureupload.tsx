@@ -1,55 +1,29 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable react/button-has-type */
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import Header from '../components/Header';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import Header from "../components/Header";
 
 function Pictureupload() {
-  const [fileImage, setFileImage] = useState('');
+  const [fileImage, setFileImage] = useState("");
 
   const deleteFileImage = () => {
     URL.revokeObjectURL(fileImage);
-    setFileImage('');
+    setFileImage("");
   };
 
   const handleSelect = async (e: any) => {
     const file = e.target.files[0];
     const Image = URL.createObjectURL(file);
     setFileImage(Image);
-
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append('files', file);
-
-    // await axios({
-    //   method: 'post',
-    //   url: 'http://127.0.0.1:8000/api/images/',
-    //   data: formData,
-    //   headers: {
-    //     'Content-Type': 'multipart/form-data',
-    //     Accept: 'application/json',
-    //   },
-    // });
   };
 
-  const sendImage = async (e: any) => {
-    const file = e.target.files[0];
-    const Image = URL.createObjectURL(file);
-    setFileImage(Image);
-
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append('files', file);
-
-    const navigate = useNavigate();
-    navigate('/Style', { state: formData });
-  };
   return (
     <div
       className="absolute bg-center bg-cover w-full h-full"
-      style={{ backgroundImage: 'url(images/background.png)' }}
+      style={{ backgroundImage: "url(images/background.png)" }}
     >
       <Header />
       <div className="flex justify-center items-center ml-[26.5rem]">
@@ -82,13 +56,11 @@ function Pictureupload() {
           />
         </label>
 
-        <button
-          className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ..."
-          onClick={sendImage}
-        >
+        <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
           <Link
-            to="/Style"
-            style={{ color: 'inherit', textDecoration: 'inherit' }}
+            to={{ pathname: "/Style" }}
+            state={{ fileImage }}
+            style={{ color: "inherit", textDecoration: "inherit" }}
           >
             화풍 선택
           </Link>
