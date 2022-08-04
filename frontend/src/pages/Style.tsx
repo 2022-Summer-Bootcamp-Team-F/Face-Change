@@ -11,7 +11,7 @@ import Header from "../components/Header";
 function Style() {
   const { state } = useLocation();
   const handleOnClick = (index: number, e: any) => {
-    const list = e.props.children.props.id;
+    const list = e.props.children.key;
     console.log(list);
   };
 
