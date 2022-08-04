@@ -24,12 +24,12 @@ const slideList = [
 
 function Style() {
   const handleOnClick = (index: number, e: any) => {
-    const list = e.props.children.props.id;
+    const list = e.props.children.key;
     console.log(list);
   };
 
   const onSubmit = async (index: number, e: any) => {
-    const list = e.props.children.props.id;
+    const list = e.props.children.key;
     console.log(list);
 
     const { state } = useLocation();
@@ -37,8 +37,8 @@ function Style() {
 
     await axios({
       method: 'post',
-      url: 'http://127.0.0.1:8000/api/style/',
-      data: { id: list },
+      url: 'http://127.0.0.1:8000/api/images/',
+      data: { key: list },
       headers: {
         'Content-Type': 'application/json',
       },
