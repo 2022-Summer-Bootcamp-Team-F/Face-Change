@@ -20,7 +20,7 @@
 }
 
 .carousel .control-next.control-arrow:before {
-  content: "";
+  content: '';
   border: solid #000000;
   border-width: 0 0.5rem 0.5rem 0;
   display: inline-block;
@@ -30,7 +30,7 @@
 }
 
 .carousel .control-prev.control-arrow:before {
-  content: "";
+  content: '';
   border: solid #000000;
   border-width: 0 0.5rem 0.5rem 0;
   display: inline-block;
@@ -41,6 +41,6 @@
 
 .carousel {
   width: 40rem;
-  height: 30rem;
+  height: 35rem;
   margin: 0 auto;
 }
