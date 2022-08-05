@@ -61,15 +61,7 @@ function Pictureupload() {
             onChange={handleSelect}
           />
         </label>
-        <button
-          className="h-10 w-40 rounded-2xl bg-red-500 text-white ml-4 ..."
-          onClick={() => deleteFileImage()}
-        >
-          삭제
-        </button>
-      </div>
-      {visible && (
-        <div className="flex justify-center items-center mt-[2rem]">
+        {visible && (
           <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
             <Link
               to={{ pathname: "/Style" }}
@@ -79,8 +71,14 @@ function Pictureupload() {
               화풍 선택
             </Link>
           </button>
-        </div>
-      )}
+        )}
+        <button
+          className="h-10 w-40 rounded-2xl bg-red-500 text-white ml-4 ..."
+          onClick={() => deleteFileImage()}
+        >
+          삭제
+        </button>
+      </div>
     </div>
   );
 }
