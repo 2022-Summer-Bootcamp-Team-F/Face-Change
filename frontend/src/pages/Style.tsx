@@ -1,44 +1,45 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-return-assign */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/button-has-type */
-import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import axios from 'axios';
-import 'react-responsive-carousel/lib/styles/carousel.css';
-import '../components/carousel copy.css';
-import { Carousel } from 'react-responsive-carousel';
-import Header from '../components/Header';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import axios from "axios";
+import "react-responsive-carousel/lib/styles/carousel.css";
+import "../components/carousel copy.css";
+import { Carousel } from "react-responsive-carousel";
+import Header from "../components/Header";
 
 function Style() {
+  const [count, setCount] = useState(1);
   const { state } = useLocation();
-  const handleOnClick = (e: any) => {
-    const list = e;
-    console.log(list);
+
+  const onCount = () => {
+    setCount((prevCount) => prevCount + 1);
+    if (count > 5) {
+      setCount(0);
+    }
+    console.log(count);
   };
 
   useEffect(() => {
     if (state) console.log(state);
   }, []);
 
-  const onSubmit = (e: any) => {
-    e.preventDefault();
-    onSubmit2(e);
-  };
-
-  const onSubmit2 = async (e: any) => {
+  const onSubmit = async () => {
     const { fileImage } = state as any;
-    const list = e;
     const formData = new FormData();
-    formData.append('files', fileImage);
-    formData.append('style_enum', '2');
+    formData.append("files", fileImage);
+    formData.append("style_enum", count as any);
     console.log(formData);
 
     await axios({
-      method: 'post',
-      url: 'http://localhost:8000/api/images/',
+      method: "post",
+      url: "http://localhost:8000/api/images/",
       data: formData,
       headers: {
-        'Content-Type': 'multipart/form-data',
-        Accept: 'application/json',
+        "Content-Type": "multipart/form-data",
+        Accept: "application/json",
       },
     })
       .then((response) => {
@@ -52,7 +53,7 @@ function Style() {
   return (
     <div
       className="absolute bg-center bg-cover w-full h-full"
-      style={{ backgroundImage: 'url(images/background.png)' }}
+      style={{ backgroundImage: "url(images/background.png)" }}
     >
       <Header />
       <div className="flex items-center justify-center">
@@ -61,7 +62,7 @@ function Style() {
           width="30rem"
           showThumbs={false}
           infiniteLoop
-          onChange={handleOnClick}
+          onChange={onCount}
         >
           <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
             <img
@@ -125,7 +126,7 @@ function Style() {
         <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
           <Link
             to="/Pictureupload"
-            style={{ color: 'inherit', textDecoration: 'inherit' }}
+            style={{ color: "inherit", textDecoration: "inherit" }}
           >
             사진 재선택
           </Link>
@@ -136,7 +137,7 @@ function Style() {
         >
           <Link
             to="/Results"
-            style={{ color: 'inherit', textDecoration: 'inherit' }}
+            style={{ color: "inherit", textDecoration: "inherit" }}
           >
             결과 보기
           </Link>
