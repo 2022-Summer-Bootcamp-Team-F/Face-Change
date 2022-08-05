@@ -1,20 +1,19 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable react/button-has-type */
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import Header from '../components/Header';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 function Pictureupload() {
-  const [fileImage, setFileImage] = useState('');
-  const [fileIma, setFileIma] = useState('');
+  const [fileImage, setFileImage] = useState("");
+  const [fileIma, setFileIma] = useState("");
 
   const deleteFileImage = () => {
     URL.revokeObjectURL(fileImage);
     URL.revokeObjectURL(fileIma);
-    setFileIma('');
-    setFileImage('');
+    setFileIma("");
+    setFileImage("");
   };
 
   const handleSelect = async (e: any) => {
@@ -24,10 +23,14 @@ function Pictureupload() {
     setFileImage(file);
   };
 
+  const handleError = () => {
+    <Link to="/Error" />;
+  };
+
   return (
     <div
       className="absolute bg-center bg-cover w-full h-full"
-      style={{ backgroundImage: 'url(images/background.png)' }}
+      style={{ backgroundImage: "url(images/background.png)" }}
     >
       <Header />
       <div className="flex justify-center items-center ml-[26.5rem]">
@@ -60,11 +63,14 @@ function Pictureupload() {
           />
         </label>
 
-        <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
+        <button
+          className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ..."
+          onError={handleError}
+        >
           <Link
-            to={{ pathname: '/Style' }}
+            to={{ pathname: "/Style" }}
             state={{ fileImage }}
-            style={{ color: 'inherit', textDecoration: 'inherit' }}
+            style={{ color: "inherit", textDecoration: "inherit" }}
           >
             화풍 선택
           </Link>
