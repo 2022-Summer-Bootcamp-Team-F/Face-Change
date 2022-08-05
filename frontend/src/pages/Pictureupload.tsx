@@ -8,12 +8,14 @@ import Header from "../components/Header";
 function Pictureupload() {
   const [fileImage, setFileImage] = useState("");
   const [fileIma, setFileIma] = useState("");
+  const [visible, setVisible] = useState(false);
 
   const deleteFileImage = () => {
     URL.revokeObjectURL(fileImage);
     URL.revokeObjectURL(fileIma);
     setFileIma("");
     setFileImage("");
+    setVisible(false);
   };
 
   const handleSelect = async (e: any) => {
@@ -21,10 +23,7 @@ function Pictureupload() {
     const Image = URL.createObjectURL(file);
     setFileIma(Image);
     setFileImage(file);
-  };
-
-  const handleError = () => {
-    <Link to="/Error" />;
+    setVisible(true);
   };
 
   return (
@@ -62,19 +61,6 @@ function Pictureupload() {
             onChange={handleSelect}
           />
         </label>
-
-        <button
-          className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ..."
-          onError={handleError}
-        >
-          <Link
-            to={{ pathname: "/Style" }}
-            state={{ fileImage }}
-            style={{ color: "inherit", textDecoration: "inherit" }}
-          >
-            화풍 선택
-          </Link>
-        </button>
         <button
           className="h-10 w-40 rounded-2xl bg-red-500 text-white ml-4 ..."
           onClick={() => deleteFileImage()}
@@ -82,6 +68,19 @@ function Pictureupload() {
           삭제
         </button>
       </div>
+      {visible && (
+        <div className="flex justify-center items-center mt-[2rem]">
+          <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
+            <Link
+              to={{ pathname: "/Style" }}
+              state={{ fileImage }}
+              style={{ color: "inherit", textDecoration: "inherit" }}
+            >
+              화풍 선택
+            </Link>
+          </button>
+        </div>
+      )}
     </div>
   );
 }
