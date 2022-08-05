@@ -1,49 +1,54 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-return-assign */
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/button-has-type */
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import "react-responsive-carousel/lib/styles/carousel.css";
 import "../components/carousel copy.css";
 import { Carousel } from "react-responsive-carousel";
 import Header from "../components/Header";
 
-const slideList = [
-  { id: "1", key: "1", img: "images/stylegallery_img/Cartoons_00003_01.png" },
-  {
-    id: "2",
-    key: "2",
-    img: "images//stylegallery_img/Hillary_Clinton_C00034.png",
-  },
-  { id: "3", key: "3", img: "images//stylegallery_img/16031200.png" },
-  { id: "4", key: "4", img: "images/stylegallery_img/Cartoons_00038_07.png" },
-  { id: "5", key: "5", img: "images//stylegallery_img/Liv_Tyler_C00009.png" },
-  { id: "6", key: "6", img: "images//stylegallery_img/23075800.png" },
-  { id: "7", key: "7", img: "images/stylegallery_img/Cartoons_00167_01.png" },
-];
-
 function Style() {
-  const handleOnClick = (index: number, e: any) => {
-    const list = e.props.children.props.id;
-    console.log(list);
+  const [count, setCount] = useState(1);
+  const { state } = useLocation();
+
+  const onCount = () => {
+    setCount((prevCount) => prevCount + 1);
+    if (count > 5) {
+      setCount(0);
+    }
+    console.log(count);
   };
 
-  const onSubmit = async (index: number, e: any) => {
-    const list = e.props.children.props.id;
-    console.log(list);
+  useEffect(() => {
+    if (state) console.log(state);
+  }, []);
+
+  const onSubmit = async () => {
+    const { fileImage } = state as any;
+    const formData = new FormData();
+    formData.append("files", fileImage);
+    formData.append("style_enum", count as any);
+    console.log(formData);
 
     await axios({
       method: "post",
-      url: "http://127.0.0.1:8000/api/style/",
-      data: { id: list },
+      url: "http://localhost:8000/api/images/",
+      data: formData,
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "multipart/form-data",
+        Accept: "application/json",
       },
-    });
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-
-  const listImage = slideList.map(({ key, img }) => (
-    <img alt="" src={img} key={key} />
-  ));
 
   return (
     <div
@@ -57,28 +62,63 @@ function Style() {
           width="30rem"
           showThumbs={false}
           infiniteLoop
-          onChange={handleOnClick}
+          onChange={onCount}
         >
           <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
-            {listImage.shift()}
+            <img
+              className="Cartoon"
+              id="1"
+              alt="cartoon"
+              src="images/stylegallery_img/Cartoons_00003_01.png"
+            />
           </div>
           <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
-            {listImage.shift()}
+            <img
+              className="Caricature"
+              id="2"
+              alt="caricature"
+              src="images//stylegallery_img/Hillary_Clinton_C00034.png"
+            />
           </div>
           <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
-            {listImage.shift()}
+            <img
+              className="anime"
+              id="3"
+              alt="anime"
+              src="images//stylegallery_img/16031200.png"
+            />
           </div>
           <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
-            {listImage.shift()}
+            <img
+              className="Cartoon"
+              id="4"
+              alt="cartoon"
+              src="images/stylegallery_img/Cartoons_00038_07.png"
+            />
           </div>
           <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
-            {listImage.shift()}
+            <img
+              className="Caricature"
+              id="5"
+              alt="caricature"
+              src="images//stylegallery_img/Liv_Tyler_C00009.png"
+            />
           </div>
           <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
-            {listImage.shift()}
+            <img
+              className="anime"
+              id="6"
+              alt="anime"
+              src="images//stylegallery_img/23075800.png"
+            />
           </div>
           <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
-            {listImage.shift()}
+            <img
+              className="Cartoon"
+              id="7"
+              alt="cartoon"
+              src="images/stylegallery_img/Cartoons_00167_01.png"
+            />
           </div>
         </Carousel>
       </div>
@@ -93,10 +133,10 @@ function Style() {
         </button>
         <button
           className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ..."
-          onClick={() => onSubmit}
+          onClick={onSubmit}
         >
           <Link
-            to="/Results"
+            to="/Loading"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
             결과 보기

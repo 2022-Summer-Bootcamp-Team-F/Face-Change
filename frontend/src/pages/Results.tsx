@@ -57,17 +57,11 @@ export default function Results() {
   ));
 
   const downloadImage = () => {
-    axios({
-      url: "http://127.0.0.1:8000/api/imgs/",
-      method: "GET",
-      responseType: "blob",
-    }).then((response) => {
-      const url = window.URL.createObjectURL(new Blob([response.data]));
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "image명";
-      link.click();
-    });
+    const url = window.URL.createObjectURL(new Blob([image]));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "resultImage.png";
+    link.click();
   };
 
   return (
@@ -102,6 +96,7 @@ export default function Results() {
           </Link>
         </button>
         <button
+          id="download"
           className="h-10 w-40 rounded-2xl bg-purple-600 text-white ml-4 ..."
           onClick={downloadImage}
         >
