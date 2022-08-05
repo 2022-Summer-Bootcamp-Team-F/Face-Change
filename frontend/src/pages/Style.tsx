@@ -136,7 +136,7 @@ function Style() {
           onClick={onSubmit}
         >
           <Link
-            to="/Results"
+            to="/Loading"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
             결과 보기

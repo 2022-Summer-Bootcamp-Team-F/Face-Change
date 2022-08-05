@@ -1,12 +1,17 @@
-import React from 'react';
-import Header from '../components/Header';
+import React from "react";
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 export default function Loading() {
   return (
     <div
       className="absolute bg-center bg-cover w-full h-full"
-      style={{ backgroundImage: 'url(images/background.png)' }}
+      style={{ backgroundImage: "url(images/background.png)" }}
     >
+      <meta
+        httpEquiv="refresh"
+        content="5; url=http://localhost:3000/Results"
+      />
       <Header />
       <div className="flex w-[16rem] h-[16rem] m-auto justify-center align-items mt-[5rem]">
         <img alt="spinner" src="images/Spinner.png" />

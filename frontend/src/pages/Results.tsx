@@ -6,41 +6,41 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
 
-// const list = [
-//   { id: "1", key: "1", img: "images/test/test1.jpg" },
-//   { id: "2", key: "2", img: "images/test/test2.jpg" },
-//   { id: "3", key: "3", img: "images/test/test3.jpg" },
-//   { id: "4", key: "4", img: "images/test/test4.jpg" },
-//   { id: "5", key: "5", img: "images/test/test5.jpg" },
-//   { id: "6", key: "6", img: "images/test/test6.jpg" },
-// ];
+const list = [
+  { id: "1", key: "1", img: "images/test/test1.jpg" },
+  { id: "2", key: "2", img: "images/test/test2.jpg" },
+  { id: "3", key: "3", img: "images/test/test3.jpg" },
+  { id: "4", key: "4", img: "images/test/test4.jpg" },
+  { id: "5", key: "5", img: "images/test/test5.jpg" },
+  { id: "6", key: "6", img: "images/test/test6.jpg" },
+];
 
 export default function Results() {
-  const [image, setImage] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const serverURL = "http://127.0.0.1:8000/api/imgs/";
-  const imageList = async () => {
-    try {
-      setError("");
-      setImage([]);
-      setLoading(true);
-      const response = await axios.get(serverURL);
-      setImage(response.data);
-    } catch (e: any) {
-      setError(e);
-    }
-    setLoading(false);
-  };
-  useEffect(() => {
-    imageList();
-  }, []);
+  const [image, setImage] = useState("");
+  // const [loading, setLoading] = useState(false);
+  // const [error, setError] = useState("");
+  // const serverURL = "http://127.0.0.1:8000/api/imgs/";
+  // const imageList = async () => {
+  //   try {
+  //     setError("");
+  //     setImage([]);
+  //     setLoading(true);
+  //     const response = await axios.get(serverURL);
+  //     setImage(response.data);
+  //   } catch (e: any) {
+  //     setError(e);
+  //   }
+  //   setLoading(false);
+  // };
+  // useEffect(() => {
+  //   imageList();
+  // }, []);
 
-  if (loading) return <Link to="/Loading" />;
-  if (error) return <Link to="/Error" />;
-  if (!image) return null;
+  // if (loading) return <Link to="/Loading" />;
+  // if (error) return <Link to="/Error" />;
+  // if (!image) return null;
 
-  const listImage = image.map(({ key, img }) => (
+  const listImage = list.map(({ key, img }) => (
     <li className="mt-[1rem]">
       <img
         alt=""
@@ -52,22 +52,16 @@ export default function Results() {
     </li>
   ));
 
-  const resultImage = image.map(({ key, img }) => (
+  const resultImage = list.map(({ key, img }) => (
     <div>{image === key ? <img alt="" src={img} key={key} /> : null}</div>
   ));
 
   const downloadImage = () => {
-    axios({
-      url: "http://127.0.0.1:8000/api/imgs/",
-      method: "GET",
-      responseType: "blob",
-    }).then((response) => {
-      const url = window.URL.createObjectURL(new Blob([response.data]));
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "image명";
-      link.click();
-    });
+    const url = window.URL.createObjectURL(new Blob([image]));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "resultImage.png";
+    link.click();
   };
 
   return (
@@ -102,6 +96,7 @@ export default function Results() {
           </Link>
         </button>
         <button
+          id="download"
           className="h-10 w-40 rounded-2xl bg-purple-600 text-white ml-4 ..."
           onClick={downloadImage}
         >
