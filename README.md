@@ -139,5 +139,5 @@ Backend : Docker, Python
 | 동승현 | Frontend | [@Dong-Seung-hyeon](https://github.com/Dong-Seung-hyeon) |
 | 최정훈 | Frontend | [@saa00123](https://github.com/saa00123) |
 | 김민주 | Backend | [@minz-cha](https://github.com/minz-cha) |
-| 최준영 | Backend | [@minz-cha](https://github.com/minz-cha) | 
+| 최준영 | Backend | [@junyoungch](https://github.com/junyoungch) | 
 | 오현택 | AI, Devops | [@hyeontack5](https://github.com/hyeontack5) |
