@@ -1,22 +1,22 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/button-has-type */
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import Header from "../components/Header";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import Header from '../components/Header';
 
 const list = [
-  { id: "1", key: "1", img: "images/test/test1.jpg" },
-  { id: "2", key: "2", img: "images/test/test2.jpg" },
-  { id: "3", key: "3", img: "images/test/test3.jpg" },
-  { id: "4", key: "4", img: "images/test/test4.jpg" },
-  { id: "5", key: "5", img: "images/test/test5.jpg" },
-  { id: "6", key: "6", img: "images/test/test6.jpg" },
+  { id: '1', key: '1', img: 'images/test/test1.jpg' },
+  { id: '2', key: '2', img: 'images/test/test2.jpg' },
+  { id: '3', key: '3', img: 'images/test/test3.jpg' },
+  { id: '4', key: '4', img: 'images/test/test4.jpg' },
+  { id: '5', key: '5', img: 'images/test/test5.jpg' },
+  { id: '6', key: '6', img: 'images/test/test6.jpg' },
 ];
 
 export default function Results() {
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState('');
   // const [loading, setLoading] = useState(false);
   // const [error, setError] = useState("");
   // const serverURL = "http://127.0.0.1:8000/api/imgs/";
@@ -58,19 +58,19 @@ export default function Results() {
 
   const downloadImage = () => {
     const url = window.URL.createObjectURL(new Blob([image]));
-    const link = document.createElement("a");
+    const link = document.createElement('a');
     link.href = url;
-    link.download = "resultImage.png";
+    link.download = 'resultImage.png';
     link.click();
   };
 
   return (
     <div
       className="absolute bg-center bg-cover w-full h-full"
-      style={{ backgroundImage: "url(images/background.png)" }}
+      style={{ backgroundImage: 'url(images/background.png)' }}
     >
       <Header />
-      <div className="container flex justify-center items-center m-auto ml-[2rem]">
+      <div className="container flex justify-center items-center m-auto ml-[4.2rem]">
         <div className="overflow-auto h-[30rem] w-[5rem]">
           <ul>{listImage}</ul>
         </div>
@@ -82,7 +82,7 @@ export default function Results() {
         <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ...">
           <Link
             to="/Pictureupload"
-            style={{ color: "inherit", textDecoration: "inherit" }}
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             업로드 이동
           </Link>
@@ -90,7 +90,7 @@ export default function Results() {
         <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
           <Link
             to="/Style"
-            style={{ color: "inherit", textDecoration: "inherit" }}
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             선택 이동
           </Link>
