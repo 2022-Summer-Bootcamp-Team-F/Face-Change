@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 export default function Header() {
   return (
     <div className="Logo">
-      <div className="flex p-[50px] w-[30rem] h-[11.3rem]">
+      <div className="flex p-[50px] xl:w-[30rem] lg:w-[30rem] md:w-[25rem] sm:w-[20rem] mt-[1rem]">
         <a className="flex" href="http://localhost:3000/">
           <img className="logoImage" alt="logo" src="images/logo.png" />
         </a>
