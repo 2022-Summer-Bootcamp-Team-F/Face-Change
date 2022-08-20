@@ -33,6 +33,29 @@ services:
     depends_on:
       - backend
       - frontend
+  
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    # hostname: rabbit
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+    depends_on:
+      - backend
+
+  worker:
+    build: ./backend
+    hostname: worker
+    command: celery -A config worker --loglevel=INFO
+    volumes:
+      - ./backend:/backend
+    depends_on:
+      - backend
+      - rabbitmq
+    restart: unless-stopped
 
 # 컨테이너 내려도 데이터 유지되도록 함
 volumes:
