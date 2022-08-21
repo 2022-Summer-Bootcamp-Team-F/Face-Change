@@ -2,13 +2,13 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/button-has-type */
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import axios from "axios";
-import "react-responsive-carousel/lib/styles/carousel.css";
-import "../components/carousel copy.css";
-import { Carousel } from "react-responsive-carousel";
-import Header from "../components/Header";
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import axios from 'axios';
+import 'react-responsive-carousel/lib/styles/carousel.css';
+import '../components/carousel copy.css';
+import { Carousel } from 'react-responsive-carousel';
+import Header from '../components/Header';
 
 function Style() {
   const [count, setCount] = useState(1);
@@ -29,17 +29,17 @@ function Style() {
   const onSubmit = async () => {
     const { fileImage } = state as any;
     const formData = new FormData();
-    formData.append("files", fileImage);
-    formData.append("style_enum", count as any);
+    formData.append('files', fileImage);
+    formData.append('style_enum', count as any);
     console.log(formData);
 
     await axios({
-      method: "post",
-      url: "http://localhost:8000/api/images/",
+      method: 'post',
+      url: 'http://localhost:8000/api/images/',
       data: formData,
       headers: {
-        "Content-Type": "multipart/form-data",
-        Accept: "application/json",
+        'Content-Type': 'multipart/form-data',
+        Accept: 'application/json',
       },
     })
       .then((response) => {
@@ -53,7 +53,7 @@ function Style() {
   return (
     <div
       className="absolute bg-center bg-cover w-full h-full"
-      style={{ backgroundImage: "url(images/background.png)" }}
+      style={{ backgroundImage: 'url(images/background.png)' }}
     >
       <Header />
       <div className="flex items-center justify-center">
@@ -64,7 +64,7 @@ function Style() {
           infiniteLoop
           onChange={onCount}
         >
-          <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
+          <div className="flex justify-center items-center border-dotted h-[30rem] xl:w-[30rem] lg:w-[25rem] md:w-[20rem] sm:w-[15rem]">
             <img
               className="Cartoon"
               id="1"
@@ -72,7 +72,7 @@ function Style() {
               src="images/stylegallery_img/Cartoons_00003_01.png"
             />
           </div>
-          <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
+          <div className="flex justify-center items-center border-dotted h-[30rem] xl:w-[30rem] lg:w-[25rem] md:w-[20rem] sm:w-[15rem]">
             <img
               className="Caricature"
               id="2"
@@ -80,7 +80,7 @@ function Style() {
               src="images//stylegallery_img/Hillary_Clinton_C00034.png"
             />
           </div>
-          <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
+          <div className="flex justify-center items-center border-dotted h-[30rem] xl:w-[30rem] lg:w-[25rem] md:w-[20rem] sm:w-[15rem]">
             <img
               className="anime"
               id="3"
@@ -88,7 +88,7 @@ function Style() {
               src="images//stylegallery_img/16031200.png"
             />
           </div>
-          <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
+          <div className="flex justify-center items-center border-dotted h-[30rem] xl:w-[30rem] lg:w-[25rem] md:w-[20rem] sm:w-[15rem]">
             <img
               className="Cartoon"
               id="4"
@@ -96,7 +96,7 @@ function Style() {
               src="images/stylegallery_img/Cartoons_00038_07.png"
             />
           </div>
-          <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem]">
+          <div className="flex justify-center items-center border-dotted h-[30rem] xl:w-[30rem] lg:w-[25rem] md:w-[20rem] sm:w-[15rem]">
             <img
               className="Caricature"
               id="5"
@@ -123,21 +123,21 @@ function Style() {
         </Carousel>
       </div>
       <div className="flex justify-center items-center mt-10">
-        <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
+        <button className="h-10 xl:w-[12rem] lg:w-[10rem] md:w-[8rem] sm:w-[6rem] rounded-2xl bg-blue-500 text-white xl:text-1.9xl lg:text-1.5xl md:text-1xl sm:text=0.5xl ml-4 ...">
           <Link
             to="/Pictureupload"
-            style={{ color: "inherit", textDecoration: "inherit" }}
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             사진 재선택
           </Link>
         </button>
         <button
-          className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ..."
+          className="h-10 xl:w-[12rem] lg:w-[10rem] md:w-[8rem] sm:w-[6rem] rounded-2xl bg-blue-500 text-white xl:text-1.9xl lg:text-1.5xl md:text-1xl sm:text=0.5xl ml-4 ..."
           onClick={onSubmit}
         >
           <Link
             to="/Loading"
-            style={{ color: "inherit", textDecoration: "inherit" }}
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             결과 보기
           </Link>
