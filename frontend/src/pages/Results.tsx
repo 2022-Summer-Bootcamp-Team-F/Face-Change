@@ -71,15 +71,15 @@ export default function Results() {
     >
       <Header />
       <div className="container flex justify-center items-center m-auto ml-[2rem]">
-        <div className="overflow-auto h-[30rem] w-[5rem]">
+        <div className="overflow-auto xl:w-[5rem] md:w-[4rem] sm:w-[3rem] xl:h-[30rem] md:h-[25rem] sm:h-[20rem]">
           <ul>{listImage}</ul>
         </div>
-        <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem] p-4 border-4 ml-[3rem]">
+        <div className="flex justify-center items-center border-dotted xl:w-[30rem] md:w-[25rem] sm:w-[20rem] xl:h-[30rem] md:h-[25rem] sm:h-[20rem] p-4 border-4 ml-[3rem]">
           {resultImage}
         </div>
       </div>
       <div className="Container flex justify-center items-center mt-20 xl:text-[1rem] sm:text-[0.7rem]">
-        <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ...">
+        <button className="xl:w-40 sm:w-20 h-10 rounded-2xl bg-blue-500 text-white ...">
           <Link
             to="/Pictureupload"
             style={{ color: "inherit", textDecoration: "inherit" }}
@@ -87,7 +87,7 @@ export default function Results() {
             업로드 이동
           </Link>
         </button>
-        <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
+        <button className="xl:w-40 sm:w-20 h-10 rounded-2xl bg-blue-500 text-white ml-4 ...">
           <Link
             to="/Style"
             style={{ color: "inherit", textDecoration: "inherit" }}
@@ -97,7 +97,7 @@ export default function Results() {
         </button>
         <button
           id="download"
-          className="h-10 w-40 rounded-2xl bg-purple-600 text-white ml-4 ..."
+          className="xl:w-40 sm:w-20 h-10 rounded-2xl bg-purple-600 text-white ml-4 ..."
           onClick={downloadImage}
         >
           저장하기
