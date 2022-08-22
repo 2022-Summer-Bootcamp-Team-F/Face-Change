@@ -71,7 +71,7 @@ export default function Results() {
     >
       <Header />
       <div className="container flex justify-center items-center m-auto xl:mt-0 md:mt-[3rem] sm:mt-[5rem] sml:mt-[8rem]">
-        <div className="overflow-auto xl:w-[5rem] md:w-[4rem] sm:w-[3rem] sml:w-[10rem] xl:h-[30rem] md:h-[25rem] sm:h-[20rem] sml:h-[15rem]">
+        <div className="overflow-auto xl:w-[8rem] md:w-[6rem] sm:w-[5rem] sml:w-[10rem] xl:h-[30rem] md:h-[25rem] sm:h-[20rem] sml:h-[15rem]">
           <ul>{listImage}</ul>
         </div>
         <div className="flex justify-center items-center border-dotted xl:w-[30rem] md:w-[25rem] sm:w-[20rem] sml:w-[25rem] xl:h-[30rem] md:h-[25rem] sm:h-[20rem] sml:h-[15rem] p-4 border-4 ml-[3rem]">
