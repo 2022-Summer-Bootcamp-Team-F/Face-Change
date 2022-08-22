@@ -46,9 +46,9 @@ function Pictureupload() {
           </p>
         </div>
       </div>
-      <div className="flex justify-center items-center mt-[3rem]">
+      <div className="flex justify-center items-center mt-[3rem] xl:text-[1rem] sm:text-[0.7rem]">
         <label
-          className="flex justify-center items-center xl:w-40 sm:w-20 h-10 rounded-2xl bg-blue-500 text-white xl:text-[1rem] sm:text-[0.7rem]"
+          className="flex justify-center items-center xl:w-40 sm:w-20 h-10 rounded-2xl bg-blue-500 text-white"
           htmlFor="name"
         >
           사진 업로드
@@ -62,7 +62,7 @@ function Pictureupload() {
           />
         </label>
         {visible && (
-          <button className="xl:w-40 sm:w-20 h-10 rounded-2xl bg-blue-500 text-white ml-4 xl:text-[1rem] sm:text-[0.7rem]">
+          <button className="xl:w-40 sm:w-20 h-10 rounded-2xl bg-blue-500 text-white ml-4">
             <Link
               to={{ pathname: "/Style" }}
               state={{ fileImage }}
@@ -73,7 +73,7 @@ function Pictureupload() {
           </button>
         )}
         <button
-          className="xl:w-40 sm:w-20 h-10 rounded-2xl bg-red-500 text-white ml-4 xl:text-[1rem] sm:text-[0.7rem]"
+          className="xl:w-40 sm:w-20 h-10 rounded-2xl bg-red-500 text-white ml-4"
           onClick={() => deleteFileImage()}
         >
           삭제

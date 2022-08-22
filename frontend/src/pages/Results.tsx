@@ -78,7 +78,7 @@ export default function Results() {
           {resultImage}
         </div>
       </div>
-      <div className="Container flex justify-center items-center mt-20">
+      <div className="Container flex justify-center items-center mt-20 xl:text-[1rem] sm:text-[0.7rem]">
         <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ...">
           <Link
             to="/Pictureupload"
