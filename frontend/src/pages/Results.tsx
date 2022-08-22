@@ -70,16 +70,16 @@ export default function Results() {
       style={{ backgroundImage: "url(images/background.png)" }}
     >
       <Header />
-      <div className="container flex justify-center items-center m-auto ml-[2rem]">
-        <div className="overflow-auto xl:w-[5rem] md:w-[4rem] sm:w-[3rem] xl:h-[30rem] md:h-[25rem] sm:h-[20rem]">
+      <div className="container flex justify-center items-center m-auto xl:mt-0 md:mt-[3rem] sm:mt-[5rem] sml:mt-[8rem]">
+        <div className="overflow-auto xl:w-[5rem] md:w-[4rem] sm:w-[3rem] sml:w-[6rem] xl:h-[30rem] md:h-[25rem] sm:h-[20rem] sml:h-[15rem]">
           <ul>{listImage}</ul>
         </div>
-        <div className="flex justify-center items-center border-dotted xl:w-[30rem] md:w-[25rem] sm:w-[20rem] xl:h-[30rem] md:h-[25rem] sm:h-[20rem] p-4 border-4 ml-[3rem]">
+        <div className="flex justify-center items-center border-dotted xl:w-[30rem] md:w-[25rem] sm:w-[20rem] sml:w-[25rem] xl:h-[30rem] md:h-[25rem] sm:h-[20rem] sml:h-[15rem] p-4 border-4 ml-[3rem]">
           {resultImage}
         </div>
       </div>
-      <div className="Container flex justify-center items-center mt-20 xl:text-[1rem] sm:text-[0.7rem]">
-        <button className="xl:w-40 sm:w-20 h-10 rounded-2xl bg-blue-500 text-white ...">
+      <div className="container flex justify-center items-center mt-20 text-[1rem] m-auto">
+        <button className="xl:w-40 sml:w-[7rem] h-10 rounded-2xl bg-blue-500 text-white ...">
           <Link
             to="/Pictureupload"
             style={{ color: "inherit", textDecoration: "inherit" }}
@@ -87,7 +87,7 @@ export default function Results() {
             업로드 이동
           </Link>
         </button>
-        <button className="xl:w-40 sm:w-20 h-10 rounded-2xl bg-blue-500 text-white ml-4 ...">
+        <button className="xl:w-40 sml:w-[7rem] h-10 rounded-2xl bg-blue-500 text-white ml-4 ...">
           <Link
             to="/Style"
             style={{ color: "inherit", textDecoration: "inherit" }}
@@ -97,7 +97,7 @@ export default function Results() {
         </button>
         <button
           id="download"
-          className="xl:w-40 sm:w-20 h-10 rounded-2xl bg-purple-600 text-white ml-4 ..."
+          className="xl:w-40 sml:w-[7rem] h-10 rounded-2xl bg-purple-600 text-white ml-4 ..."
           onClick={downloadImage}
         >
           저장하기
