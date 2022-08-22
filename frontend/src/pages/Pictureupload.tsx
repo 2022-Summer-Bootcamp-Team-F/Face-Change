@@ -32,11 +32,11 @@ function Pictureupload() {
       style={{ backgroundImage: "url(images/background.png)" }}
     >
       <Header />
-      <div className="flex justify-center items-center ml-[26.5rem]">
-        <div className="flex justify-center items-center border-dotted h-[30rem] w-[30rem] p-4 border-4">
+      <div className="flex justify-center items-center xl:ml-[26.5rem] md:ml-[15rem] sm:ml-[15rem]">
+        <div className="flex justify-center items-center border-dotted xl:w-[30rem] md:w-[27rem] sm:w-[30rem] xl:h-[30rem] md:h-[25rem] sm:h-[20rem] p-4 border-4">
           {fileIma && <img alt="sample" id="sample" src={fileIma} />}
         </div>
-        <div className="flex justify-center items-center border-dotted h-[20rem] w-[15rem] p-4 border-4 ml-[10rem]">
+        <div className="flex justify-center items-center border-dotted xl:w-[15rem] md:w-[10rem] xl:h-[20rem] md:h-[15rem] p-4 border-4 xl:ml-[11rem] md:ml-[5rem]">
           <p>
             <p className="text-center">주의 사항</p>
             <br />
@@ -48,7 +48,7 @@ function Pictureupload() {
       </div>
       <div className="flex justify-center items-center mt-[3rem]">
         <label
-          className="flex justify-center items-center h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ..."
+          className="flex justify-center items-center xl:w-40 sm:w-20 h-10 rounded-2xl bg-blue-500 text-white xl:text-[1rem] sm:text-[0.7rem]"
           htmlFor="name"
         >
           사진 업로드
@@ -62,7 +62,7 @@ function Pictureupload() {
           />
         </label>
         {visible && (
-          <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
+          <button className="xl:w-40 sm:w-20 h-10 rounded-2xl bg-blue-500 text-white ml-4 xl:text-[1rem] sm:text-[0.7rem]">
             <Link
               to={{ pathname: "/Style" }}
               state={{ fileImage }}
@@ -73,7 +73,7 @@ function Pictureupload() {
           </button>
         )}
         <button
-          className="h-10 w-40 rounded-2xl bg-red-500 text-white ml-4 ..."
+          className="xl:w-40 sm:w-20 h-10 rounded-2xl bg-red-500 text-white ml-4 xl:text-[1rem] sm:text-[0.7rem]"
           onClick={() => deleteFileImage()}
         >
           삭제
