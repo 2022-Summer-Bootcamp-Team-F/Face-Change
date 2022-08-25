@@ -9,7 +9,7 @@ function Error() {
       className="absolute bg-center bg-cover w-full h-full"
       style={{ backgroundImage: 'url(images/ErrorBackImg.png)' }}
     >
-      <div className="flex justify-center items-center m-auto xl:w-[50rem] lg:w-[40rem] md:w-[30rem] sm:w-[20rem] mt-[1rem]">
+      <div className="flex justify-center items-center m-auto xl:w-[40rem] lg:w-[30rem] md:w-[20rem] sm:w-[10rem] mt-[1rem]">
         <img className="ErrorIcon" alt="erroricon" src="images/ErrorIcon.png" />
       </div>
       <div className="font-bold m-auto xl:text-5xl lg:text-4xl md:text-2xl sm:text-1xl xl:w-[100rem] lg:w-[40rem] md:w-[30rem] sm:w-[20rem]">
