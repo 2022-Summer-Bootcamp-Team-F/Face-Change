@@ -9,6 +9,7 @@ import "react-responsive-carousel/lib/styles/carousel.css";
 import "../components/carousel copy.css";
 import { Carousel } from "react-responsive-carousel";
 import Header from "../components/Header";
+import Slider from "../components/Slide";
 
 function Style() {
   const [count, setCount] = useState(1);
@@ -50,13 +51,43 @@ function Style() {
       });
   };
 
+  const slide = () => {
+    const image = [
+      { id: "1", img: "images/stylegallery_img/Cartoons_00003_01.png" },
+      { id: "2", img: "images/stylegallery_img/Hillary_Clinton_C00034.png" },
+      { id: "3", img: "images/stylegallery_img/16031200.png" },
+      { id: "4", img: "images/stylegallery_img/Cartoons_00038_07.png" },
+      { id: "5", img: "images/stylegallery_img/Liv_Tyler_C00009.png" },
+      { id: "6", img: "images/stylegallery_img/23075800.png" },
+      { id: "7", img: "images/stylegallery_img/Cartoons_00167_01.png" },
+    ];
+
+    const [translateValue, setTranslateValue] = useState<number>(0);
+
+    const Right = (): void => {
+      if (translateValue !== 70 * (image.length - 1)) {
+        setTranslateValue((prev) => prev + 70);
+      } else {
+        setTranslateValue(0);
+      }
+    };
+
+    const Left = (): void => {
+      if (translateValue !== 0) {
+        setTranslateValue((prev) => prev - 70);
+      } else {
+        setTranslateValue(70 * (image.length - 1));
+      }
+    };
+  };
+
   return (
     <div
       className="absolute bg-center bg-cover w-full h-full"
       style={{ backgroundImage: "url(images/background.png)" }}
     >
       <Header />
-      <div className="flex items-center justify-center">
+      {/* <div className="flex items-center justify-center">
         <Carousel
           showArrows
           width="30rem"
@@ -121,7 +152,7 @@ function Style() {
             />
           </div>
         </Carousel>
-      </div>
+      </div> */}
       <div className="flex justify-center items-center mt-10">
         <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
           <Link
