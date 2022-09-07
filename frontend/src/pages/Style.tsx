@@ -87,7 +87,7 @@ function Style() {
       style={{ backgroundImage: "url(images/background.png)" }}
     >
       <Header />
-      {/* <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center">
         <Carousel
           showArrows
           width="30rem"
@@ -152,7 +152,7 @@ function Style() {
             />
           </div>
         </Carousel>
-      </div> */}
+      </div>
       <div className="flex justify-center items-center mt-10">
         <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
           <Link
