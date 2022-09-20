@@ -8,7 +8,7 @@ import axios from "axios";
 import "react-responsive-carousel/lib/styles/carousel.css";
 import "../components/carousel copy.css";
 import { Carousel } from "react-responsive-carousel";
-import Swiper from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Header from "../components/Header";
 import Slider from "../components/Slide";
 
@@ -88,7 +88,30 @@ function Style() {
       style={{ backgroundImage: "url(images/background.png)" }}
     >
       <Header />
-      <div className="flex items-center justify-center">
+      <div className="block items-center justify-center">
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          onClick={(swiper) => {
+            swiper.slideNext();
+          }}
+        >
+          <SwiperSlide>
+            <div className="inline-block w-[200px] h-[200px] bg-[#ffff00]">
+              첫번째 슬라이드
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="inline-block w-[200px] h-[200px] bg-[#ff00ff]">
+              두번째 슬라이드
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="inline-block w-[200px] h-[200px] bg-[#0000ff]">
+              세번째 슬라이드
+            </div>
+          </SwiperSlide>
+        </Swiper>
         {/* <Carousel
           showArrows
           width="30rem"
