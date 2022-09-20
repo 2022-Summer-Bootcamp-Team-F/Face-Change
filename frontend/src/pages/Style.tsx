@@ -2,12 +2,13 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/button-has-type */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import "react-responsive-carousel/lib/styles/carousel.css";
 import "../components/carousel copy.css";
 import { Carousel } from "react-responsive-carousel";
+import Swiper from "swiper";
 import Header from "../components/Header";
 import Slider from "../components/Slide";
 
@@ -88,7 +89,7 @@ function Style() {
     >
       <Header />
       <div className="flex items-center justify-center">
-        <Carousel
+        {/* <Carousel
           showArrows
           width="30rem"
           showThumbs={false}
@@ -151,7 +152,7 @@ function Style() {
               src="images/stylegallery_img/Cartoons_00167_01.png"
             />
           </div>
-        </Carousel>
+        </Carousel> */}
       </div>
       <div className="flex justify-center items-center mt-10">
         <button className="h-10 w-40 rounded-2xl bg-blue-500 text-white ml-4 ...">
